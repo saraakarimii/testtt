@@ -1,0 +1,315 @@
+{
+  "page_specs": {
+    "side_by_side": {
+      "page_mm": [
+        297.0,
+        210.0
+      ],
+      "inner": 18.0,
+      "outer": 12.0,
+      "top": 12.0,
+      "bottom": 12.0,
+      "gap": 8.0,
+      "usable_mm": [
+        267.0,
+        186.0
+      ],
+      "slot_mm": [
+        129.5,
+        186.0
+      ],
+      "slots_per_page": 2,
+      "reading_order": "right_to_left",
+      "spiral": "left edge"
+    }
+  },
+  "min_cell_mm": 3.0,
+  "classification_rule": "physical cell size only; side_by_side first, else full_page, else rejected",
+  "images": [
+    {
+      "image": "photo_5769491962166712589_y",
+      "colors_used": 17,
+      "classification": "side_by_side",
+      "chosen": {
+        "layout": "side_by_side",
+        "guide_placement": "below",
+        "grid": {
+          "cols": 28,
+          "rows": 42
+        },
+        "slot_mm": [
+          129.5,
+          186.0
+        ],
+        "guide_mm": {
+          "width": 112.0,
+          "height": 42.0,
+          "columns": 3,
+          "rows": 6,
+          "entries": 17
+        },
+        "spacing_artwork_to_guide_mm": 4.0,
+        "artwork_area_available_mm": [
+          129.5,
+          140.0
+        ],
+        "artwork_final_mm": {
+          "width": 93.333,
+          "height": 140.0
+        },
+        "cell_mm": 3.333,
+        "meets_min_cell": true,
+        "slot_positions_on_page_mm": [
+          [
+            18.0,
+            12.0,
+            129.5,
+            186.0
+          ],
+          [
+            155.5,
+            12.0,
+            129.5,
+            186.0
+          ]
+        ],
+        "boxes_in_slot_mm": {
+          "artwork": [
+            18.083,
+            0.0,
+            93.333,
+            140.0
+          ],
+          "guide": [
+            8.75,
+            144.0,
+            112.0,
+            42.0
+          ]
+        }
+      },
+      "all_options": [
+        {
+          "layout": "side_by_side",
+          "guide_placement": "below",
+          "grid": {
+            "cols": 28,
+            "rows": 42
+          },
+          "slot_mm": [
+            129.5,
+            186.0
+          ],
+          "guide_mm": {
+            "width": 112.0,
+            "height": 42.0,
+            "columns": 3,
+            "rows": 6,
+            "entries": 17
+          },
+          "spacing_artwork_to_guide_mm": 4.0,
+          "artwork_area_available_mm": [
+            129.5,
+            140.0
+          ],
+          "artwork_final_mm": {
+            "width": 93.333,
+            "height": 140.0
+          },
+          "cell_mm": 3.333,
+          "meets_min_cell": true,
+          "slot_positions_on_page_mm": [
+            [
+              18.0,
+              12.0,
+              129.5,
+              186.0
+            ],
+            [
+              155.5,
+              12.0,
+              129.5,
+              186.0
+            ]
+          ],
+          "boxes_in_slot_mm": {
+            "artwork": [
+              18.083,
+              0.0,
+              93.333,
+              140.0
+            ],
+            "guide": [
+              8.75,
+              144.0,
+              112.0,
+              42.0
+            ]
+          }
+        },
+        {
+          "layout": "side_by_side",
+          "guide_placement": "side",
+          "grid": {
+            "cols": 28,
+            "rows": 42
+          },
+          "slot_mm": [
+            129.5,
+            186.0
+          ],
+          "guide_mm": {
+            "width": 36.0,
+            "height": 119.0,
+            "columns": 1,
+            "rows": 17,
+            "entries": 17
+          },
+          "spacing_artwork_to_guide_mm": 4.0,
+          "artwork_area_available_mm": [
+            89.5,
+            186.0
+          ],
+          "artwork_final_mm": {
+            "width": 89.5,
+            "height": 134.25
+          },
+          "cell_mm": 3.196,
+          "meets_min_cell": true,
+          "slot_positions_on_page_mm": [
+            [
+              18.0,
+              12.0,
+              129.5,
+              186.0
+            ],
+            [
+              155.5,
+              12.0,
+              129.5,
+              186.0
+            ]
+          ],
+          "boxes_in_slot_mm": {
+            "artwork": [
+              0.0,
+              25.875,
+              89.5,
+              134.25
+            ],
+            "guide": [
+              93.5,
+              33.5,
+              36.0,
+              119.0
+            ]
+          }
+        },
+        {
+          "layout": "full_page",
+          "guide_placement": "below",
+          "grid": {
+            "cols": 28,
+            "rows": 42
+          },
+          "slot_mm": [
+            180.0,
+            273.0
+          ],
+          "guide_mm": {
+            "width": 150.0,
+            "height": 35.0,
+            "columns": 4,
+            "rows": 5,
+            "entries": 17
+          },
+          "spacing_artwork_to_guide_mm": 4.0,
+          "artwork_area_available_mm": [
+            180.0,
+            234.0
+          ],
+          "artwork_final_mm": {
+            "width": 156.0,
+            "height": 234.0
+          },
+          "cell_mm": 5.571,
+          "meets_min_cell": true,
+          "slot_positions_on_page_mm": [
+            [
+              18.0,
+              12.0,
+              180.0,
+              273.0
+            ]
+          ],
+          "boxes_in_slot_mm": {
+            "artwork": [
+              12.0,
+              0.0,
+              156.0,
+              234.0
+            ],
+            "guide": [
+              15.0,
+              238.0,
+              150.0,
+              35.0
+            ]
+          }
+        },
+        {
+          "layout": "full_page",
+          "guide_placement": "side",
+          "grid": {
+            "cols": 28,
+            "rows": 42
+          },
+          "slot_mm": [
+            180.0,
+            273.0
+          ],
+          "guide_mm": {
+            "width": 36.0,
+            "height": 119.0,
+            "columns": 1,
+            "rows": 17,
+            "entries": 17
+          },
+          "spacing_artwork_to_guide_mm": 4.0,
+          "artwork_area_available_mm": [
+            140.0,
+            273.0
+          ],
+          "artwork_final_mm": {
+            "width": 140.0,
+            "height": 210.0
+          },
+          "cell_mm": 5.0,
+          "meets_min_cell": true,
+          "slot_positions_on_page_mm": [
+            [
+              18.0,
+              12.0,
+              180.0,
+              273.0
+            ]
+          ],
+          "boxes_in_slot_mm": {
+            "artwork": [
+              0.0,
+              31.5,
+              140.0,
+              210.0
+            ],
+            "guide": [
+              144.0,
+              77.0,
+              36.0,
+              119.0
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

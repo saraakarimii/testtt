@@ -1,0 +1,107 @@
+{
+  "palette": "data/main-21.palette.json",
+  "layout": "side_by_side",
+  "collections": [
+    {
+      "id": "moonlight_mischief",
+      "title": "Moonlight & Mischief",
+      "subtitle": "A Spooky Color-by-Number Adventure",
+      "theme_color": [
+        35,
+        25,
+        63
+      ],
+      "cover": "inputs/spooky_03_haunted_house_signed.jpg",
+      "images": [
+        {
+          "name": "Bats Under the Moon",
+          "path": "inputs/spooky_01_bats_moon.jpg"
+        },
+        {
+          "name": "The Purple Cheshire Cat",
+          "path": "inputs/spooky_02_purple_cat.jpg"
+        },
+        {
+          "name": "The Haunted House",
+          "path": "inputs/spooky_03_haunted_house_signed.jpg",
+          "warnings": [
+            "Visible artist signature in source image; replace with clean licensed artwork before commercial publication."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "birds_in_bloom",
+      "title": "Birds in Bloom",
+      "subtitle": "A Color-by-Number Collection of Birds & Flowers",
+      "theme_color": [
+        22,
+        62,
+        62
+      ],
+      "cover": "inputs/birds_02_songbird_flowers.jpg",
+      "images": [
+        {
+          "name": "The Colorful Songbird",
+          "path": "inputs/birds_01_colorful_songbird.jpg"
+        },
+        {
+          "name": "A Songbird Among Flowers",
+          "path": "inputs/birds_02_songbird_flowers.jpg"
+        },
+        {
+          "name": "The Snowy Owl",
+          "path": "inputs/birds_03_snowy_owl.jpg"
+        }
+      ]
+    },
+    {
+      "id": "cozy_horizons",
+      "title": "Cozy Horizons",
+      "subtitle": "A Relaxing Color-by-Number Journey Through Nature",
+      "theme_color": [
+        25,
+        58,
+        49
+      ],
+      "cover": "inputs/cozy_01_seaside_cabin_sunset.jpg",
+      "images": [
+        {
+          "name": "Seaside Cabin at Sunset",
+          "path": "inputs/cozy_01_seaside_cabin_sunset.jpg"
+        },
+        {
+          "name": "Lavender by the Sea",
+          "path": "inputs/cozy_02_lavender_sunset.jpg"
+        },
+        {
+          "name": "Mountain Lake at Sunrise",
+          "path": "inputs/cozy_03_mountain_lake_header.jpg",
+          "warnings": [
+            "Visible website/header text at top of source image; replace with clean artwork before commercial publication."
+          ]
+        },
+        {
+          "name": "Village at Sunset",
+          "path": "inputs/cozy_04_village_sunset.jpg"
+        },
+        {
+          "name": "Breakfast in the Mountains",
+          "path": "inputs/cozy_05_mountain_breakfast.jpg"
+        },
+        {
+          "name": "Autumn Terrace",
+          "path": "inputs/cozy_06_autumn_terrace.jpg"
+        },
+        {
+          "name": "Van by the Coast",
+          "path": "inputs/cozy_07_van_by_coast.jpg"
+        },
+        {
+          "name": "Coffee by the Campfire",
+          "path": "inputs/cozy_08_campfire_mugs.jpg"
+        }
+      ]
+    }
+  ]
+}

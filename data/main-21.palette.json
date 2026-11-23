@@ -1,0 +1,28 @@
+{
+  "palette_id": "main-21",
+  "name": "Main Palette (21 colors)",
+  "version": "1.0.0",
+  "colors": [
+    {"id": "01", "name": "Black",        "hex": "#202124"},
+    {"id": "02", "name": "Dark Gray",    "hex": "#55565A"},
+    {"id": "03", "name": "Gray",         "hex": "#92949A"},
+    {"id": "04", "name": "Light Gray",   "hex": "#D5D7DA"},
+    {"id": "05", "name": "White",        "hex": "#FFFFFF"},
+    {"id": "06", "name": "Dark Brown",   "hex": "#653B2B"},
+    {"id": "07", "name": "Brown",        "hex": "#A56A43"},
+    {"id": "08", "name": "Beige",        "hex": "#E5C49B"},
+    {"id": "09", "name": "Dark Red",     "hex": "#9E2638"},
+    {"id": "10", "name": "Red",          "hex": "#E53945"},
+    {"id": "11", "name": "Orange",       "hex": "#F47B35"},
+    {"id": "12", "name": "Yellow",       "hex": "#F6D64A"},
+    {"id": "13", "name": "Yellow Green", "hex": "#A9C94B"},
+    {"id": "14", "name": "Green",        "hex": "#3C9B62"},
+    {"id": "15", "name": "Dark Green",   "hex": "#246348"},
+    {"id": "16", "name": "Teal",         "hex": "#35AFA4"},
+    {"id": "17", "name": "Cyan",         "hex": "#5CC7D6"},
+    {"id": "18", "name": "Light Blue",   "hex": "#75AEE8"},
+    {"id": "19", "name": "Blue",         "hex": "#3569B7"},
+    {"id": "20", "name": "Purple",       "hex": "#8056A6"},
+    {"id": "21", "name": "Pink",         "hex": "#E78BAF"}
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "purpose": "Regression set for adaptive detail-preserving image preprocessing",
+  "images": [
+    {
+      "file": "01_cupcake_illustration.jpg",
+      "category": "food illustration",
+      "inspect": [
+        "fine edge retention",
+        "texture preservation",
+        "gradient banding",
+        "color transitions",
+        "oversharpening halos"
+      ]
+    },
+    {
+      "file": "02_pop_art_character.jpg",
+      "category": "graphic character art",
+      "inspect": [
+        "fine edge retention",
+        "texture preservation",
+        "gradient banding",
+        "color transitions",
+        "oversharpening halos"
+      ]
+    },
+    {
+      "file": "03_candy_character.jpg",
+      "category": "graphic character art",
+      "inspect": [
+        "fine edge retention",
+        "texture preservation",
+        "gradient banding",
+        "color transitions",
+        "oversharpening halos"
+      ]
+    },
+    {
+      "file": "04_daisy_still_life.jpg",
+      "category": "painterly still life",
+      "inspect": [
+        "fine edge retention",
+        "texture preservation",
+        "gradient banding",
+        "color transitions",
+        "oversharpening halos"
+      ]
+    },
+    {
+      "file": "05_coastal_bicycle.jpg",
+      "category": "coastal landscape",
+      "inspect": [
+        "fine edge retention",
+        "texture preservation",
+        "gradient banding",
+        "color transitions",
+        "oversharpening halos"
+      ]
+    },
+    {
+      "file": "06_lakeside_house.jpg",
+      "category": "painted architecture and landscape",
+      "inspect": [
+        "fine edge retention",
+        "texture preservation",
+        "gradient banding",
+        "color transitions",
+        "oversharpening halos"
+      ]
+    },
+    {
+      "file": "07_mountain_lake_flowers.jpg",
+      "category": "painted landscape",
+      "inspect": [
+        "fine edge retention",
+        "texture preservation",
+        "gradient banding",
+        "color transitions",
+        "oversharpening halos"
+      ]
+    },
+    {
+      "file": "08_pink_seaside.jpg",
+      "category": "painted seascape",
+      "inspect": [
+        "fine edge retention",
+        "texture preservation",
+        "gradient banding",
+        "color transitions",
+        "oversharpening halos"
+      ]
+    }
+  ]
+}

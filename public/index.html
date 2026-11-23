@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChromaBook Studio</title>
+  <meta name="description" content="ChromaBook Studio — Color-by-number artwork inbox, processing lab, project management, and print-ready book production.">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand-mark">ChromaBook Studio</div>
+    <nav class="nav-list" aria-label="Main navigation">
+      <button class="nav-item" data-view="dashboard" onclick="navigate('dashboard')">
+        <span>Dashboard</span>
+      </button>
+      <button class="nav-item active" data-view="inbox" onclick="navigate('inbox')">
+        <span>Artwork Inbox</span>
+        <span class="nav-count" id="navInboxCount">0</span>
+      </button>
+      <button class="nav-item" data-view="library" onclick="navigate('library')">
+        <span>Artwork Library</span>
+        <span class="nav-count" id="navLibraryCount">0</span>
+      </button>
+      <button class="nav-item" data-view="projects" onclick="navigate('projects')">
+        <span>Projects</span>
+        <span class="nav-count" id="navProjectsCount">0</span>
+      </button>
+      <button class="nav-item" data-view="lab" onclick="navigate('lab')">
+        <span>Processing Lab</span>
+      </button>
+      <button class="nav-item" data-view="books" onclick="navigate('books')">
+        <span>Books</span>
+        <span class="nav-count" id="navBooksCount">0</span>
+      </button>
+      <button class="nav-item" data-view="history" onclick="navigate('history')">
+        <span>Processing History</span>
+      </button>
+      <button class="nav-item" data-view="audit" onclick="navigate('audit')">
+        <span>Audit Log</span>
+      </button>
+      <button class="nav-item" data-view="status" onclick="navigate('status')">
+        <span>System Status</span>
+      </button>
+    </nav>
+    <div class="sidebar-footer">
+      <div>Locked Palette: main-21 (21 colors)</div>
+    </div>
+  </aside>
+
+  <div class="main-area">
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="btn-secondary btn-sm mobile-menu-btn" onclick="toggleSidebar()">Menu</button>
+        <div class="breadcrumb" id="topbarTitle">Artwork Inbox</div>
+      </div>
+      <div class="topbar-right"></div>
+    </header>
+
+    <main class="content-wrap">
+      <div id="workspaceContent" style="display:none">
+        <!-- 1. Dashboard -->
+        <section class="view-panel" id="view-dashboard">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">Studio Dashboard</h1>
+              <p class="page-subtitle">Upload first, organize into projects when ready, then process and assemble print-ready books.</p>
+            </div>
+            <button class="btn-primary" onclick="navigate('inbox')">Upload to Artwork Inbox</button>
+          </div>
+          <div class="kpi-grid">
+            <div class="kpi-card"><div class="kpi-label">Total Artworks</div><div class="kpi-value" id="kpiTotal">0</div></div>
+            <div class="kpi-card"><div class="kpi-label">Unassigned in Inbox</div><div class="kpi-value" id="kpiInbox">0</div></div>
+            <div class="kpi-card"><div class="kpi-label">Awaiting Review</div><div class="kpi-value" id="kpiReview">0</div></div>
+            <div class="kpi-card"><div class="kpi-label">Projects</div><div class="kpi-value" id="kpiProjects">0</div></div>
+            <div class="kpi-card"><div class="kpi-label">Books</div><div class="kpi-value" id="kpiBooks">0</div></div>
+          </div>
+          <div class="split-2">
+            <div class="surface">
+              <h3>Recommended Workflow</h3>
+              <p class="page-subtitle" style="margin-bottom:14px">Projects are optional during upload and only required when assembling a book.</p>
+              <ol style="margin:0;padding-left:18px;color:var(--text-secondary);display:grid;gap:8px">
+                <li><strong>Upload Images:</strong> Drop PNG, JPG, JPEG, or WEBP files directly into Artwork Inbox.</li>
+                <li><strong>Review &amp; Organize:</strong> Browse thumbnails, check dimensions, and assign selections to a project.</li>
+                <li><strong>Process &amp; Tune:</strong> Compare Engines A–D and refine Notebook v2 parameters in Processing Lab.</li>
+                <li><strong>Generate Book:</strong> Approve processed artworks and build Side-by-Side and Full-Page A4 PDFs, each with its own numbered pages and matching colour answer-key pages.</li>
+              </ol>
+            </div>
+            <div class="surface">
+              <h3>Recent Workspace Activity</h3>
+              <p class="page-subtitle" style="margin-bottom:12px">Latest uploads, assignments, processing runs, and book builds.</p>
+              <div id="dashboardAudit" style="font-size:13px;color:var(--text-secondary)">No activity yet.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. Artwork Inbox -->
+        <section class="view-panel active" id="view-inbox">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">Artwork Inbox</h1>
+              <p class="page-subtitle">Upload one or multiple images immediately without creating a project first.</p>
+            </div>
+          </div>
+
+          <div class="dropzone" id="inboxDropzone">
+            <h3>Drop artwork images here</h3>
+            <p>Supports PNG, JPG, JPEG, and WEBP · Maximum 25 MB per image · Multiple files supported</p>
+            <div class="dropzone-controls">
+              <input type="text" id="inboxNamePrefix" placeholder="Optional artwork name prefix" aria-label="Optional artwork name prefix">
+              <input type="file" id="inboxFileInput" accept=".png,.jpg,.jpeg,.webp,image/png,image/jpeg,image/webp" multiple style="display:none">
+              <button class="btn-primary" onclick="document.getElementById('inboxFileInput').click()">Select Images</button>
+            </div>
+            <div class="dropzone-options">
+              <label class="inline-check" for="inboxAutoProcess">
+                <input type="checkbox" id="inboxAutoProcess" checked onchange="onUploadOptionsChange()">
+                <span>Auto-process on upload</span>
+              </label>
+              <label class="inline-field" for="inboxPresetSelect">
+                <span>Preset</span>
+                <select id="inboxPresetSelect" onchange="onUploadOptionsChange()">
+                  <option value="auto">Auto (recommended)</option>
+                </select>
+              </label>
+              <label class="inline-check" for="inboxBgRemove">
+                <input type="checkbox" id="inboxBgRemove" onchange="onUploadOptionsChange()">
+                <span>Remove background</span>
+              </label>
+              <select id="inboxBgMode" aria-label="Background removal mode" onchange="onUploadOptionsChange()" disabled style="width:auto;min-width:155px">
+                <option value="simple">Simple (border)</option>
+                <option value="ai">AI (Gemini)</option>
+                <option value="auto">Auto (uniform border)</option>
+              </select>
+            </div>
+            <div class="upload-queue" id="inboxUploadQueue"></div>
+          </div>
+
+          <div class="toolbar">
+            <div class="toolbar-group">
+              <input type="search" id="inboxSearch" placeholder="Search filename, name, or SHA-256..." oninput="renderInbox()">
+              <select id="inboxFilter" onchange="renderInbox()">
+                <option value="unassigned">Unassigned Only</option>
+                <option value="all">All Uploads</option>
+                <option value="duplicates">Duplicates Flagged</option>
+              </select>
+            </div>
+            <div class="toolbar-group">
+              <span class="meta-line tabular" id="inboxSelectionInfo">0 selected</span>
+              <button class="btn-secondary btn-sm" onclick="selectAllInbox(true)">Select All</button>
+              <button class="btn-secondary btn-sm" onclick="selectAllInbox(false)">Clear</button>
+              <button class="btn-secondary btn-sm" id="inboxProcessSelectedBtn" onclick="processSelectedInbox()" disabled>Process Selected</button>
+              <button class="btn-primary btn-sm" id="inboxAssignBtn" onclick="openAssignModal()" disabled>Assign to Project</button>
+              <button class="btn-danger btn-sm" id="inboxDeleteBtn" onclick="confirmDeleteSelectedInbox()" disabled>Delete Selected</button>
+            </div>
+          </div>
+
+          <div id="inboxGrid" class="asset-grid"></div>
+        </section>
+
+        <!-- 3. Artwork Library -->
+        <section class="view-panel" id="view-library">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">Artwork Library</h1>
+              <p class="page-subtitle">Browse, filter, inspect, approve, and manage versions across all artworks.</p>
+            </div>
+            <button class="btn-secondary" onclick="refreshAll()">Refresh</button>
+          </div>
+          <div class="toolbar">
+            <div class="toolbar-group">
+              <input type="search" id="librarySearch" placeholder="Search artwork library..." oninput="renderLibrary()">
+              <select id="libraryProjectFilter" onchange="renderLibrary()">
+                <option value="">All Locations</option>
+                <option value="__unassigned__">Unassigned (Artwork Inbox)</option>
+              </select>
+              <select id="libraryStatusFilter" onchange="renderLibrary()">
+                <option value="">All Statuses</option>
+                <option value="uploaded">Uploaded</option>
+                <option value="processing">Processing</option>
+                <option value="review">In Review</option>
+                <option value="approved">Approved</option>
+                <option value="rejected">Rejected</option>
+                <option value="failed">Failed</option>
+              </select>
+            </div>
+            <div class="toolbar-group">
+              <span class="meta-line tabular" id="librarySelectionInfo">0 selected</span>
+              <button class="btn-secondary btn-sm" onclick="selectAllLibrary(true)">Select All</button>
+              <button class="btn-secondary btn-sm" onclick="selectAllLibrary(false)">Clear</button>
+              <button class="btn-primary btn-sm" id="libraryAssignBtn" onclick="openAssignModal(Array.from(state.selectedLibraryIds))" disabled>Assign to Project</button>
+              <button class="btn-danger btn-sm" id="libraryDeleteBtn" onclick="confirmDeleteSelectedLibrary()" disabled>Delete Selected</button>
+            </div>
+          </div>
+          <div id="libraryGrid" class="asset-grid"></div>
+        </section>
+
+        <!-- 4. Projects -->
+        <section class="view-panel" id="view-projects">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">Projects</h1>
+              <p class="page-subtitle">Organize uploaded artworks into book production projects.</p>
+            </div>
+            <button class="btn-primary" onclick="openCreateProjectModal()">Create Project</button>
+          </div>
+          <div id="projectsContainer" class="table-wrap"></div>
+          <div id="projectDetailPanel" class="surface" style="margin-top:18px;display:none"></div>
+        </section>
+
+        <!-- 5. Processing Lab -->
+        <section class="view-panel" id="view-lab">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">Processing Lab</h1>
+              <p class="page-subtitle">Compare Engines A, B, C, and D across 29 Notebook v2 parameters and the locked 21-color palette.</p>
+            </div>
+          </div>
+          <div class="lab-layout">
+            <div class="surface">
+              <h3>Mapping Configuration</h3>
+              <label class="field-label" for="labAssetSelect">Artwork</label>
+              <select id="labAssetSelect" onchange="onLabAssetChange()"></select>
+
+              <label class="field-label" for="labPresetSelect">Preset</label>
+              <select id="labPresetSelect" onchange="onLabPresetChange()">
+                <option value="auto">Auto (recommended)</option>
+                <option value="">Custom / Manual</option>
+              </select>
+              <div id="labPresetDesc" style="font-size:12px;color:var(--text-muted);margin-top:4px"></div>
+
+              <label class="field-label" for="labEngineSelect">Primary Output Engine</label>
+              <select id="labEngineSelect" onchange="onLabEngineSelectChange()">
+                <option value="auto">Auto (best metric score)</option>
+                <option value="D" selected>D — SLIC Region-Aware ICM</option>
+                <option value="C">C — Edge-Aware ICM</option>
+                <option value="B">B — Cell-wise CIEDE2000</option>
+                <option value="A">A — Legacy Mean-Lab / ΔE76</option>
+              </select>
+
+              <div id="labParamsContainer"></div>
+
+              <label class="field-label" style="display:flex;align-items:center;gap:8px;margin-top:14px">
+                <input type="checkbox" id="labRunStability" onchange="labDirty=true;state.labDirty=true" style="width:auto">
+                <span>Run ±1 L* stability test (Engines B, C, D)</span>
+              </label>
+
+              <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">
+                <button class="btn-primary" onclick="runLabProcessing()">Run Processing</button>
+                <button class="btn-secondary" onclick="resetLabToPreset()">Reset to preset</button>
+                <button class="btn-secondary" onclick="resetLabDefaults()">Reset Defaults</button>
+                <button class="btn-secondary" onclick="exportLabConfig()">Export JSON</button>
+              </div>
+            </div>
+
+            <div class="surface" id="labResultsPanel">
+              <div class="empty-state">
+                <h3>Select an artwork to inspect or process</h3>
+                <p>Both unassigned Inbox artworks and project-assigned artworks can be processed here.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. Books -->
+        <section class="view-panel" id="view-books">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">Books</h1>
+              <p class="page-subtitle">Book generation is project-based. Select a project and include approved artworks to generate PDFs.</p>
+            </div>
+          </div>
+          <div class="split-2" style="align-items:start">
+            <div class="surface">
+              <h3>Generate a Book</h3>
+              <label class="field-label" for="bookProjectSelect">Project</label>
+              <select id="bookProjectSelect" onchange="renderBookAssetPicker()"></select>
+
+              <label class="field-label" for="bookTitleInput">Book Title</label>
+              <input type="text" id="bookTitleInput" placeholder="e.g. Cozy Autumn Collection">
+
+              <label class="field-label" for="bookSubtitleInput">Subtitle</label>
+              <input type="text" id="bookSubtitleInput" value="A Color-by-Number Collection">
+
+              <label class="field-label">Approved Artworks in Project</label>
+              <div id="bookAssetPicker" style="display:grid;gap:6px;max-height:260px;overflow-y:auto;padding:8px;border:1px solid var(--border-hairline);border-radius:6px;background:var(--bg-canvas)"></div>
+              <div id="bookPreflightNotice" style="margin-top:10px"></div>
+
+              <div style="margin-top:14px">
+                <button class="btn-primary" id="generateBookBtn" onclick="generateBook()">Generate A4 Layout PDFs</button>
+              </div>
+            </div>
+
+            <div class="surface">
+              <h3>Generated Books</h3>
+              <p class="page-subtitle" style="margin-bottom:12px">Each layout PDF contains its numbered print pages followed by matching colour answer-key pages. Download the preflight report to review artwork classification.</p>
+              <div id="booksList" style="display:grid;gap:10px"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. Processing History -->
+        <section class="view-panel" id="view-history">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">Processing History</h1>
+              <p class="page-subtitle">Complete history of all image processing runs, parameters, and engine metrics.</p>
+            </div>
+            <button class="btn-secondary" onclick="loadHistory()">Refresh</button>
+          </div>
+          <div id="historyContainer" class="table-wrap"></div>
+        </section>
+
+        <!-- 8. Audit Log -->
+        <section class="view-panel" id="view-audit">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">Audit Log</h1>
+              <p class="page-subtitle">Immutable event history for uploads, assignments, processing runs, reviews, and book builds.</p>
+            </div>
+            <button class="btn-secondary" onclick="loadAudit()">Refresh</button>
+          </div>
+          <div id="auditContainer" class="table-wrap"></div>
+        </section>
+
+        <!-- 9. System Status -->
+        <section class="view-panel" id="view-status">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">System Status</h1>
+              <p class="page-subtitle">Studio configuration, locked 21-color production palette, and mapping engines.</p>
+            </div>
+          </div>
+          <div id="systemStatusContainer"></div>
+        </section>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- Assign to Project Modal -->
+<div class="modal-backdrop" id="assignModal" role="dialog" aria-modal="true" aria-labelledby="assignModalTitle">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <h3 id="assignModalTitle">Assign Artworks to Project</h3>
+      <button class="btn-secondary btn-sm" onclick="closeModal('assignModal')">Close</button>
+    </div>
+    <p class="page-subtitle" id="assignSummaryText" style="margin-bottom:14px"></p>
+
+    <div class="segmented" role="tablist">
+      <button id="tabExistingProj" class="active" onclick="switchAssignTab('existing')">Existing Project</button>
+      <button id="tabNewProj" onclick="switchAssignTab('new')">Create New Project</button>
+    </div>
+
+    <div id="assignExistingPane">
+      <label class="field-label" for="assignProjectSelect">Select Project</label>
+      <select id="assignProjectSelect"></select>
+    </div>
+
+    <div id="assignNewPane" style="display:none">
+      <label class="field-label" for="assignNewProjectName">New Project Name</label>
+      <input type="text" id="assignNewProjectName" placeholder="e.g. Botanical Series Vol. 1">
+      <label class="field-label" for="assignNewProjectDesc">Description (optional)</label>
+      <textarea id="assignNewProjectDesc" placeholder="Optional project notes"></textarea>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn-secondary" onclick="closeModal('assignModal')">Cancel</button>
+      <button class="btn-primary" onclick="confirmAssignToProject()">Assign Selected Artworks</button>
+    </div>
+  </div>
+</div>
+
+<!-- Create Project Modal -->
+<div class="modal-backdrop" id="createProjectModal" role="dialog" aria-modal="true" aria-labelledby="createProjectModalTitle">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <h3 id="createProjectModalTitle">Create Project</h3>
+      <button class="btn-secondary btn-sm" onclick="closeModal('createProjectModal')">Close</button>
+    </div>
+    <label class="field-label" for="newProjectName">Project Name</label>
+    <input type="text" id="newProjectName" placeholder="e.g. Winter Wildlife Collection">
+    <label class="field-label" for="newProjectDesc">Description (optional)</label>
+    <textarea id="newProjectDesc" placeholder="Optional description"></textarea>
+    <div class="modal-footer">
+      <button class="btn-secondary" onclick="closeModal('createProjectModal')">Cancel</button>
+      <button class="btn-primary" onclick="submitCreateProject()">Create Project</button>
+    </div>
+  </div>
+</div>
+
+<!-- Review Modal -->
+<div class="modal-backdrop" id="reviewModal" role="dialog" aria-modal="true" aria-labelledby="reviewModalTitle">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <h3 id="reviewModalTitle">Review Processed Artwork</h3>
+      <button class="btn-secondary btn-sm" onclick="closeModal('reviewModal')">Close</button>
+    </div>
+    <p class="page-subtitle" id="reviewModalSubtitle"></p>
+    <label class="field-label" for="reviewNoteInput">Review Note (optional)</label>
+    <textarea id="reviewNoteInput" placeholder="Add approval notes or reason for rejection"></textarea>
+    <div class="modal-footer">
+      <button class="btn-secondary" onclick="closeModal('reviewModal')">Cancel</button>
+      <button class="btn-primary" id="reviewConfirmBtn" onclick="submitReviewAction()">Confirm</button>
+    </div>
+  </div>
+</div>
+
+<!-- Confirmation Modal (Delete Permanently vs Remove from Project) -->
+<div class="modal-backdrop" id="confirmModal" role="dialog" aria-modal="true" aria-labelledby="confirmModalTitle">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <h3 id="confirmModalTitle">Confirm Action</h3>
+      <button class="btn-secondary btn-sm" onclick="closeModal('confirmModal')">Close</button>
+    </div>
+    <p class="page-subtitle" id="confirmModalBody" style="margin:0;line-height:1.55"></p>
+    <div class="modal-footer">
+      <button class="btn-secondary" onclick="closeModal('confirmModal')">Cancel</button>
+      <button class="btn-danger" id="confirmModalBtn" onclick="executeConfirmModal()">Confirm</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,2333 @@
+{
+  "source_sha256": "a848c9aaad38df8ad1471b24c856e878ffcbd3bedffb46268d94c2108a25f47e",
+  "palette": {
+    "palette_id": "main-21",
+    "name": "Main Palette (21 colors)",
+    "version": "1.0.0",
+    "colors": [
+      {
+        "id": "01",
+        "name": "Black",
+        "hex": "#202124",
+        "rgb": [
+          32,
+          33,
+          36
+        ]
+      },
+      {
+        "id": "02",
+        "name": "Dark Gray",
+        "hex": "#55565A",
+        "rgb": [
+          85,
+          86,
+          90
+        ]
+      },
+      {
+        "id": "03",
+        "name": "Gray",
+        "hex": "#92949A",
+        "rgb": [
+          146,
+          148,
+          154
+        ]
+      },
+      {
+        "id": "04",
+        "name": "Light Gray",
+        "hex": "#D5D7DA",
+        "rgb": [
+          213,
+          215,
+          218
+        ]
+      },
+      {
+        "id": "05",
+        "name": "White",
+        "hex": "#FFFFFF",
+        "rgb": [
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "id": "06",
+        "name": "Dark Brown",
+        "hex": "#653B2B",
+        "rgb": [
+          101,
+          59,
+          43
+        ]
+      },
+      {
+        "id": "07",
+        "name": "Brown",
+        "hex": "#A56A43",
+        "rgb": [
+          165,
+          106,
+          67
+        ]
+      },
+      {
+        "id": "08",
+        "name": "Beige",
+        "hex": "#E5C49B",
+        "rgb": [
+          229,
+          196,
+          155
+        ]
+      },
+      {
+        "id": "09",
+        "name": "Dark Red",
+        "hex": "#9E2638",
+        "rgb": [
+          158,
+          38,
+          56
+        ]
+      },
+      {
+        "id": "10",
+        "name": "Red",
+        "hex": "#E53945",
+        "rgb": [
+          229,
+          57,
+          69
+        ]
+      },
+      {
+        "id": "11",
+        "name": "Orange",
+        "hex": "#F47B35",
+        "rgb": [
+          244,
+          123,
+          53
+        ]
+      },
+      {
+        "id": "12",
+        "name": "Yellow",
+        "hex": "#F6D64A",
+        "rgb": [
+          246,
+          214,
+          74
+        ]
+      },
+      {
+        "id": "13",
+        "name": "Yellow Green",
+        "hex": "#A9C94B",
+        "rgb": [
+          169,
+          201,
+          75
+        ]
+      },
+      {
+        "id": "14",
+        "name": "Green",
+        "hex": "#3C9B62",
+        "rgb": [
+          60,
+          155,
+          98
+        ]
+      },
+      {
+        "id": "15",
+        "name": "Dark Green",
+        "hex": "#246348",
+        "rgb": [
+          36,
+          99,
+          72
+        ]
+      },
+      {
+        "id": "16",
+        "name": "Teal",
+        "hex": "#35AFA4",
+        "rgb": [
+          53,
+          175,
+          164
+        ]
+      },
+      {
+        "id": "17",
+        "name": "Cyan",
+        "hex": "#5CC7D6",
+        "rgb": [
+          92,
+          199,
+          214
+        ]
+      },
+      {
+        "id": "18",
+        "name": "Light Blue",
+        "hex": "#75AEE8",
+        "rgb": [
+          117,
+          174,
+          232
+        ]
+      },
+      {
+        "id": "19",
+        "name": "Blue",
+        "hex": "#3569B7",
+        "rgb": [
+          53,
+          105,
+          183
+        ]
+      },
+      {
+        "id": "20",
+        "name": "Purple",
+        "hex": "#8056A6",
+        "rgb": [
+          128,
+          86,
+          166
+        ]
+      },
+      {
+        "id": "21",
+        "name": "Pink",
+        "hex": "#E78BAF",
+        "rgb": [
+          231,
+          139,
+          175
+        ]
+      }
+    ],
+    "sha256": "7ac56535c836b735f78ddf3e3a5039d2d832a77640ae5dfccbac64a67794140d"
+  },
+  "print_spec": {
+    "panel_width_mm": 130.0,
+    "panel_height_mm": 180.0,
+    "min_cell_mm": 3.0,
+    "number_height_ratio": 0.5,
+    "min_number_height_mm": 1.5,
+    "id_chars": 2,
+    "layouts": [
+      {
+        "name": "side_by_side",
+        "page_w": 297.0,
+        "page_h": 210.0,
+        "inner": 18.0,
+        "outer": 12.0,
+        "top": 12.0,
+        "bottom": 12.0,
+        "slots": 2,
+        "gap": 8.0,
+        "reading_order": "right_to_left"
+      }
+    ],
+    "guide": {
+      "entry_w": 36.0,
+      "entry_h": 7.0,
+      "swatch": 6.0,
+      "spacing": 4.0,
+      "column_gap": 2.0,
+      "min_artwork": 30.0
+    },
+    "palette_size": 21
+  },
+  "diagnostics": {
+    "size": [
+      736,
+      1104
+    ],
+    "aspect_h_over_w": 1.5,
+    "L_mean": 51.063804626464844,
+    "L_p5": 26.376429557800293,
+    "L_p50": 50.230194091796875,
+    "L_p95": 81.58720436096185,
+    "L_range_p5_p95": 55.210774803161556,
+    "chroma_mean": 53.98721694946289,
+    "noise_sigma_est": 1.8581381078580221,
+    "sharpness_laplacian_var": 782.2877807617188,
+    "edge_density_pct": 12.928427419354838,
+    "white_fraction_pct": 0.0005727639296187684,
+    "palette_gap_mean_dE00": 10.38496208190918,
+    "palette_gap_p95_dE00": 15.150182723999023,
+    "flags": []
+  },
+  "framings": [
+    {
+      "id": "full",
+      "crop": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "reason": "whole image",
+      "default": true
+    }
+  ],
+  "chosen_framing": "full",
+  "stages": {
+    "constraint": {
+      "allowed_cols": [
+        16,
+        22,
+        28
+      ],
+      "screen_cols": 22,
+      "aspect_h_over_w": 1.5,
+      "rejected_cols_below_min_cell": [
+        34,
+        40,
+        46,
+        52,
+        58,
+        64,
+        70,
+        76,
+        82,
+        88,
+        94,
+        100,
+        106,
+        112,
+        118
+      ]
+    },
+    "preprocess": {
+      "tried": [
+        "default",
+        "minimal",
+        "gentle"
+      ],
+      "kept": [
+        "minimal",
+        "gentle"
+      ],
+      "scores": {
+        "minimal": 85.0,
+        "gentle": 73.94,
+        "default": 36.84
+      }
+    },
+    "engines": {
+      "kept": [
+        [
+          "minimal",
+          "B"
+        ],
+        [
+          "minimal",
+          "D"
+        ]
+      ],
+      "scores": {
+        "minimal/B": 77.19,
+        "minimal/D": 71.76,
+        "gentle/B": 67.29,
+        "gentle/D": 63.69,
+        "minimal/A": 61.44,
+        "minimal/C": 58.25,
+        "gentle/C": 49.48,
+        "gentle/A": 48.91
+      }
+    },
+    "resolution": {
+      "rule": "smallest grid whose next step gains < 0.35 dE00 (diminishing returns; larger cells are easier to colour)",
+      "chosen_cols": 28
+    }
+  },
+  "candidates": [
+    {
+      "id": "f54e080782",
+      "stage": "1_preprocess",
+      "name": "default",
+      "engine": "B",
+      "grid": [
+        22,
+        33
+      ],
+      "cell_mm": 4.068,
+      "label_hash": "1183e46a2d9b8386ca6fe668cfea1438d8a322bef390d0c58e3602a606ea1c1b",
+      "score": 36.84,
+      "metrics": {
+        "DeltaE00_mean_vs_source": 16.0165,
+        "DeltaE00_median_vs_source": 12.2325,
+        "DeltaE00_p95_vs_source": 40.3907,
+        "DeltaE00_mean_vs_processed": 15.918,
+        "SSIM_vs_source": 0.2747,
+        "Edge_F1_1px": 0.4133,
+        "Edge_precision": 0.5963,
+        "Edge_recall": 0.3163,
+        "colors_used": 18,
+        "palette_utilization_pct": 85.7143,
+        "singleton_ratio_pct": 15.7025,
+        "tiny_component_ratio_pct": 19.8347,
+        "connected_components": 208,
+        "transition_rate_pct": 54.3307,
+        "runtime_seconds": 0.0001,
+        "cell_structure_f1": 0.7991,
+        "source_transition_rate_pct": 68.2176,
+        "transition_gap_pp": 13.8869
+      },
+      "stability": null,
+      "config": {
+        "framing": {
+          "crop_enabled": false,
+          "crop": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "content_zoom": 1.0,
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "padding": 0.0,
+          "snap_square_cells": true,
+          "working_max_side": 320
+        },
+        "preprocess": {
+          "brightness": 0.0,
+          "contrast": 1.0,
+          "illumination_strength": 0.25,
+          "illumination_sigma": 0.1,
+          "clahe_clip": 1.5,
+          "clahe_tiles": 8,
+          "denoise_method": "bilateral",
+          "denoise_strength": 18.0,
+          "sharpen_fine": 0.15,
+          "sharpen_coarse": 0.05
+        },
+        "edges": {
+          "auto_canny": true,
+          "canny_low": 55,
+          "canny_high": 145,
+          "close_iter": 1,
+          "scharr_weight": 0.75,
+          "sensitivity": 1.0
+        },
+        "mapping": {
+          "grid_cols": 22,
+          "max_samples": 96,
+          "trim_fraction": 0.03,
+          "sampling": "stratified",
+          "smoothness_lambda": 1.8,
+          "boundary_beta": 4.0,
+          "icm_iterations": 5,
+          "slic_segments": 320,
+          "slic_compactness": 10.0,
+          "region_balance": 0.25
+        },
+        "render": {
+          "preview_cell_px": 16,
+          "numbered_cell_px": 44,
+          "line_width": 2,
+          "number_scale": 0.34,
+          "number_gray": 10,
+          "font_path": null
+        },
+        "seed": 42
+      }
+    },
+    {
+      "id": "cedf9f4010",
+      "stage": "1_preprocess",
+      "name": "minimal",
+      "engine": "B",
+      "grid": [
+        22,
+        33
+      ],
+      "cell_mm": 4.068,
+      "label_hash": "7506738f155cef0e854837a901d671790830fa788a18de2033f5043102028b8d",
+      "score": 85.0,
+      "metrics": {
+        "DeltaE00_mean_vs_source": 15.2615,
+        "DeltaE00_median_vs_source": 12.0318,
+        "DeltaE00_p95_vs_source": 38.2566,
+        "DeltaE00_mean_vs_processed": 15.2615,
+        "SSIM_vs_source": 0.2854,
+        "Edge_F1_1px": 0.3855,
+        "Edge_precision": 0.5939,
+        "Edge_recall": 0.2853,
+        "colors_used": 16,
+        "palette_utilization_pct": 76.1905,
+        "singleton_ratio_pct": 14.3251,
+        "tiny_component_ratio_pct": 18.1818,
+        "connected_components": 190,
+        "transition_rate_pct": 51.3243,
+        "runtime_seconds": 0.0001,
+        "cell_structure_f1": 0.7988,
+        "source_transition_rate_pct": 68.2176,
+        "transition_gap_pp": 16.8933
+      },
+      "stability": null,
+      "config": {
+        "framing": {
+          "crop_enabled": false,
+          "crop": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "content_zoom": 1.0,
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "padding": 0.0,
+          "snap_square_cells": true,
+          "working_max_side": 320
+        },
+        "preprocess": {
+          "brightness": 0.0,
+          "contrast": 1.0,
+          "illumination_strength": 0.0,
+          "illumination_sigma": 0.1,
+          "clahe_clip": 0.0,
+          "clahe_tiles": 8,
+          "denoise_method": "bilateral",
+          "denoise_strength": 0.0,
+          "sharpen_fine": 0.0,
+          "sharpen_coarse": 0.0
+        },
+        "edges": {
+          "auto_canny": true,
+          "canny_low": 55,
+          "canny_high": 145,
+          "close_iter": 1,
+          "scharr_weight": 0.75,
+          "sensitivity": 1.0
+        },
+        "mapping": {
+          "grid_cols": 22,
+          "max_samples": 96,
+          "trim_fraction": 0.03,
+          "sampling": "stratified",
+          "smoothness_lambda": 1.8,
+          "boundary_beta": 4.0,
+          "icm_iterations": 5,
+          "slic_segments": 320,
+          "slic_compactness": 10.0,
+          "region_balance": 0.25
+        },
+        "render": {
+          "preview_cell_px": 16,
+          "numbered_cell_px": 44,
+          "line_width": 2,
+          "number_scale": 0.34,
+          "number_gray": 10,
+          "font_path": null
+        },
+        "seed": 42
+      }
+    },
+    {
+      "id": "bb2c93508a",
+      "stage": "1_preprocess",
+      "name": "gentle",
+      "engine": "B",
+      "grid": [
+        22,
+        33
+      ],
+      "cell_mm": 4.068,
+      "label_hash": "6043f0e8f66814ad934b0dee1c5d20b3e1113440ef7fc286547021940c7efafc",
+      "score": 73.94,
+      "metrics": {
+        "DeltaE00_mean_vs_source": 15.5816,
+        "DeltaE00_median_vs_source": 11.9801,
+        "DeltaE00_p95_vs_source": 39.5222,
+        "DeltaE00_mean_vs_processed": 15.4414,
+        "SSIM_vs_source": 0.2794,
+        "Edge_F1_1px": 0.414,
+        "Edge_precision": 0.6052,
+        "Edge_recall": 0.3146,
+        "colors_used": 18,
+        "palette_utilization_pct": 85.7143,
+        "singleton_ratio_pct": 15.1515,
+        "tiny_component_ratio_pct": 18.8705,
+        "connected_components": 195,
+        "transition_rate_pct": 52.7559,
+        "runtime_seconds": 0.0001,
+        "cell_structure_f1": 0.7988,
+        "source_transition_rate_pct": 68.2176,
+        "transition_gap_pp": 15.4617
+      },
+      "stability": null,
+      "config": {
+        "framing": {
+          "crop_enabled": false,
+          "crop": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "content_zoom": 1.0,
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "padding": 0.0,
+          "snap_square_cells": true,
+          "working_max_side": 320
+        },
+        "preprocess": {
+          "brightness": 0.0,
+          "contrast": 1.0,
+          "illumination_strength": 0.12,
+          "illumination_sigma": 0.1,
+          "clahe_clip": 0.8,
+          "clahe_tiles": 8,
+          "denoise_method": "bilateral",
+          "denoise_strength": 10.0,
+          "sharpen_fine": 0.15,
+          "sharpen_coarse": 0.05
+        },
+        "edges": {
+          "auto_canny": true,
+          "canny_low": 55,
+          "canny_high": 145,
+          "close_iter": 1,
+          "scharr_weight": 0.75,
+          "sensitivity": 1.0
+        },
+        "mapping": {
+          "grid_cols": 22,
+          "max_samples": 96,
+          "trim_fraction": 0.03,
+          "sampling": "stratified",
+          "smoothness_lambda": 1.8,
+          "boundary_beta": 4.0,
+          "icm_iterations": 5,
+          "slic_segments": 320,
+          "slic_compactness": 10.0,
+          "region_balance": 0.25
+        },
+        "render": {
+          "preview_cell_px": 16,
+          "numbered_cell_px": 44,
+          "line_width": 2,
+          "number_scale": 0.34,
+          "number_gray": 10,
+          "font_path": null
+        },
+        "seed": 42
+      }
+    },
+    {
+      "id": "1bdb5de4a2",
+      "stage": "2_engines",
+      "name": "minimal",
+      "engine": "A",
+      "grid": [
+        22,
+        33
+      ],
+      "cell_mm": 4.068,
+      "label_hash": "a828043c353f484ef571777fd58937914b8c0370383e1d5eeae3d6b447246a14",
+      "score": 61.44,
+      "metrics": {
+        "DeltaE00_mean_vs_source": 16.4278,
+        "DeltaE00_median_vs_source": 13.7364,
+        "DeltaE00_p95_vs_source": 37.1059,
+        "DeltaE00_mean_vs_processed": 16.4278,
+        "SSIM_vs_source": 0.2694,
+        "Edge_F1_1px": 0.3864,
+        "Edge_precision": 0.568,
+        "Edge_recall": 0.2928,
+        "colors_used": 17,
+        "palette_utilization_pct": 80.9524,
+        "singleton_ratio_pct": 16.8044,
+        "tiny_component_ratio_pct": 21.7631,
+        "connected_components": 214,
+        "transition_rate_pct": 55.0465,
+        "runtime_seconds": 0.0069,
+        "cell_structure_f1": 0.8246,
+        "source_transition_rate_pct": 68.2176,
+        "transition_gap_pp": 13.1711
+      },
+      "stability": null,
+      "config": {
+        "framing": {
+          "crop_enabled": false,
+          "crop": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "content_zoom": 1.0,
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "padding": 0.0,
+          "snap_square_cells": true,
+          "working_max_side": 320
+        },
+        "preprocess": {
+          "brightness": 0.0,
+          "contrast": 1.0,
+          "illumination_strength": 0.0,
+          "illumination_sigma": 0.1,
+          "clahe_clip": 0.0,
+          "clahe_tiles": 8,
+          "denoise_method": "bilateral",
+          "denoise_strength": 0.0,
+          "sharpen_fine": 0.0,
+          "sharpen_coarse": 0.0
+        },
+        "edges": {
+          "auto_canny": true,
+          "canny_low": 55,
+          "canny_high": 145,
+          "close_iter": 1,
+          "scharr_weight": 0.75,
+          "sensitivity": 1.0
+        },
+        "mapping": {
+          "grid_cols": 22,
+          "max_samples": 96,
+          "trim_fraction": 0.03,
+          "sampling": "stratified",
+          "smoothness_lambda": 1.8,
+          "boundary_beta": 4.0,
+          "icm_iterations": 5,
+          "slic_segments": 320,
+          "slic_compactness": 10.0,
+          "region_balance": 0.25
+        },
+        "render": {
+          "preview_cell_px": 16,
+          "numbered_cell_px": 44,
+          "line_width": 2,
+          "number_scale": 0.34,
+          "number_gray": 10,
+          "font_path": null
+        },
+        "seed": 42
+      }
+    },
+    {
+      "id": "a3729324d5",
+      "stage": "2_engines",
+      "name": "minimal",
+      "engine": "B",
+      "grid": [
+        22,
+        33
+      ],
+      "cell_mm": 4.068,
+      "label_hash": "7506738f155cef0e854837a901d671790830fa788a18de2033f5043102028b8d",
+      "score": 77.19,
+      "metrics": {
+        "DeltaE00_mean_vs_source": 15.2615,
+        "DeltaE00_median_vs_source": 12.0318,
+        "DeltaE00_p95_vs_source": 38.2566,
+        "DeltaE00_mean_vs_processed": 15.2615,
+        "SSIM_vs_source": 0.2854,
+        "Edge_F1_1px": 0.3855,
+        "Edge_precision": 0.5939,
+        "Edge_recall": 0.2853,
+        "colors_used": 16,
+        "palette_utilization_pct": 76.1905,
+        "singleton_ratio_pct": 14.3251,
+        "tiny_component_ratio_pct": 18.1818,
+        "connected_components": 190,
+        "transition_rate_pct": 51.3243,
+        "runtime_seconds": 0.0001,
+        "cell_structure_f1": 0.7988,
+        "source_transition_rate_pct": 68.2176,
+        "transition_gap_pp": 16.8933
+      },
+      "stability": null,
+      "config": {
+        "framing": {
+          "crop_enabled": false,
+          "crop": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "content_zoom": 1.0,
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "padding": 0.0,
+          "snap_square_cells": true,
+          "working_max_side": 320
+        },
+        "preprocess": {
+          "brightness": 0.0,
+          "contrast": 1.0,
+          "illumination_strength": 0.0,
+          "illumination_sigma": 0.1,
+          "clahe_clip": 0.0,
+          "clahe_tiles": 8,
+          "denoise_method": "bilateral",
+          "denoise_strength": 0.0,
+          "sharpen_fine": 0.0,
+          "sharpen_coarse": 0.0
+        },
+        "edges": {
+          "auto_canny": true,
+          "canny_low": 55,
+          "canny_high": 145,
+          "close_iter": 1,
+          "scharr_weight": 0.75,
+          "sensitivity": 1.0
+        },
+        "mapping": {
+          "grid_cols": 22,
+          "max_samples": 96,
+          "trim_fraction": 0.03,
+          "sampling": "stratified",
+          "smoothness_lambda": 1.8,
+          "boundary_beta": 4.0,
+          "icm_iterations": 5,
+          "slic_segments": 320,
+          "slic_compactness": 10.0,
+          "region_balance": 0.25
+        },
+        "render": {
+          "preview_cell_px": 16,
+          "numbered_cell_px": 44,
+          "line_width": 2,
+          "number_scale": 0.34,
+          "number_gray": 10,
+          "font_path": null
+        },
+        "seed": 42
+      }
+    },
+    {
+      "id": "fe302022e8",
+      "stage": "2_engines",
+      "name": "minimal",
+      "engine": "C",
+      "grid": [
+        22,
+        33
+      ],
+      "cell_mm": 4.068,
+      "label_hash": "9b57cedf2d889d60b4c6b9eda22ffe82fb668b7874a6bdf1b194a8e116286f62",
+      "score": 58.25,
+      "metrics": {
+        "DeltaE00_mean_vs_source": 15.2974,
+        "DeltaE00_median_vs_source": 11.9081,
+        "DeltaE00_p95_vs_source": 38.9446,
+        "DeltaE00_mean_vs_processed": 15.2974,
+        "SSIM_vs_source": 0.29,
+        "Edge_F1_1px": 0.3806,
+        "Edge_precision": 0.6104,
+        "Edge_recall": 0.2765,
+        "colors_used": 16,
+        "palette_utilization_pct": 76.1905,
+        "singleton_ratio_pct": 9.7796,
+        "tiny_component_ratio_pct": 12.9477,
+        "connected_components": 150,
+        "transition_rate_pct": 46.1704,
+        "runtime_seconds": 0.0218,
+        "cell_structure_f1": 0.7597,
+        "source_transition_rate_pct": 68.2176,
+        "transition_gap_pp": 22.0472
+      },
+      "stability": null,
+      "config": {
+        "framing": {
+          "crop_enabled": false,
+          "crop": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "content_zoom": 1.0,
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "padding": 0.0,
+          "snap_square_cells": true,
+          "working_max_side": 320
+        },
+        "preprocess": {
+          "brightness": 0.0,
+          "contrast": 1.0,
+          "illumination_strength": 0.0,
+          "illumination_sigma": 0.1,
+          "clahe_clip": 0.0,
+          "clahe_tiles": 8,
+          "denoise_method": "bilateral",
+          "denoise_strength": 0.0,
+          "sharpen_fine": 0.0,
+          "sharpen_coarse": 0.0
+        },
+        "edges": {
+          "auto_canny": true,
+          "canny_low": 55,
+          "canny_high": 145,
+          "close_iter": 1,
+          "scharr_weight": 0.75,
+          "sensitivity": 1.0
+        },
+        "mapping": {
+          "grid_cols": 22,
+          "max_samples": 96,
+          "trim_fraction": 0.03,
+          "sampling": "stratified",
+          "smoothness_lambda": 1.8,
+          "boundary_beta": 4.0,
+          "icm_iterations": 5,
+          "slic_segments": 320,
+          "slic_compactness": 10.0,
+          "region_balance": 0.25
+        },
+        "render": {
+          "preview_cell_px": 16,
+          "numbered_cell_px": 44,
+          "line_width": 2,
+          "number_scale": 0.34,
+          "number_gray": 10,
+          "font_path": null
+        },
+        "seed": 42
+      }
+    },
+    {
+      "id": "d51ec64366",
+      "stage": "2_engines",
+      "name": "minimal",
+      "engine": "D",
+      "grid": [
+        22,
+        33
+      ],
+      "cell_mm": 4.068,
+      "label_hash": "7e2dbcfdff101daf08e31967342fb2c80bfa117ddc5222811dfd03e76a79646e",
+      "score": 71.76,
+      "metrics": {
+        "DeltaE00_mean_vs_source": 15.2704,
+        "DeltaE00_median_vs_source": 11.9904,
+        "DeltaE00_p95_vs_source": 38.5253,
+        "DeltaE00_mean_vs_processed": 15.2704,
+        "SSIM_vs_source": 0.2881,
+        "Edge_F1_1px": 0.3807,
+        "Edge_precision": 0.6008,
+        "Edge_recall": 0.2786,
+        "colors_used": 17,
+        "palette_utilization_pct": 80.9524,
+        "singleton_ratio_pct": 12.9477,
+        "tiny_component_ratio_pct": 16.5289,
+        "connected_components": 176,
+        "transition_rate_pct": 49.6063,
+        "runtime_seconds": 0.4302,
+        "cell_structure_f1": 0.7886,
+        "source_transition_rate_pct": 68.2176,
+        "transition_gap_pp": 18.6113
+      },
+      "stability": null,
+      "config": {
+        "framing": {
+          "crop_enabled": false,
+          "crop": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "content_zoom": 1.0,
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "padding": 0.0,
+          "snap_square_cells": true,
+          "working_max_side": 320
+        },
+        "preprocess": {
+          "brightness": 0.0,
+          "contrast": 1.0,
+          "illumination_strength": 0.0,
+          "illumination_sigma": 0.1,
+          "clahe_clip": 0.0,
+          "clahe_tiles": 8,
+          "denoise_method": "bilateral",
+          "denoise_strength": 0.0,
+          "sharpen_fine": 0.0,
+          "sharpen_coarse": 0.0
+        },
+        "edges": {
+          "auto_canny": true,
+          "canny_low": 55,
+          "canny_high": 145,
+          "close_iter": 1,
+          "scharr_weight": 0.75,
+          "sensitivity": 1.0
+        },
+        "mapping": {
+          "grid_cols": 22,
+          "max_samples": 96,
+          "trim_fraction": 0.03,
+          "sampling": "stratified",
+          "smoothness_lambda": 1.8,
+          "boundary_beta": 4.0,
+          "icm_iterations": 5,
+          "slic_segments": 320,
+          "slic_compactness": 10.0,
+          "region_balance": 0.25
+        },
+        "render": {
+          "preview_cell_px": 16,
+          "numbered_cell_px": 44,
+          "line_width": 2,
+          "number_scale": 0.34,
+          "number_gray": 10,
+          "font_path": null
+        },
+        "seed": 42
+      }
+    },
+    {
+      "id": "9ec555febe",
+      "stage": "2_engines",
+      "name": "gentle",
+      "engine": "A",
+      "grid": [
+        22,
+        33
+      ],
+      "cell_mm": 4.068,
+      "label_hash": "9d40fb65e3317790c85a0cd0f256ebcdde83e77dd4114609ca6d04f6af5b7907",
+      "score": 48.91,
+      "metrics": {
+        "DeltaE00_mean_vs_source": 16.7596,
+        "DeltaE00_median_vs_source": 14.1323,
+        "DeltaE00_p95_vs_source": 37.8214,
+        "DeltaE00_mean_vs_processed": 16.4827,
+        "SSIM_vs_source": 0.2646,
+        "Edge_F1_1px": 0.3914,
+        "Edge_precision": 0.5646,
+        "Edge_recall": 0.2995,
+        "colors_used": 18,
+        "palette_utilization_pct": 85.7143,
+        "singleton_ratio_pct": 18.3196,
+        "tiny_component_ratio_pct": 24.5179,
+        "connected_components": 227,
+        "transition_rate_pct": 55.9771,
+        "runtime_seconds": 0.0072,
+        "cell_structure_f1": 0.8219,
+        "source_transition_rate_pct": 68.2176,
+        "transition_gap_pp": 12.2405
+      },
+      "stability": null,
+      "config": {
+        "framing": {
+          "crop_enabled": false,
+          "crop": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "content_zoom": 1.0,
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "padding": 0.0,
+          "snap_square_cells": true,
+          "working_max_side": 320
+        },
+        "preprocess": {
+          "brightness": 0.0,
+          "contrast": 1.0,
+          "illumination_strength": 0.12,
+          "illumination_sigma": 0.1,
+          "clahe_clip": 0.8,
+          "clahe_tiles": 8,
+          "denoise_method": "bilateral",
+          "denoise_strength": 10.0,
+          "sharpen_fine": 0.15,
+          "sharpen_coarse": 0.05
+        },
+        "edges": {
+          "auto_canny": true,
+          "canny_low": 55,
+          "canny_high": 145,
+          "close_iter": 1,
+          "scharr_weight": 0.75,
+          "sensitivity": 1.0
+        },
+        "mapping": {
+          "grid_cols": 22,
+          "max_samples": 96,
+          "trim_fraction": 0.03,
+          "sampling": "stratified",
+          "smoothness_lambda": 1.8,
+          "boundary_beta": 4.0,
+          "icm_iterations": 5,
+          "slic_segments": 320,
+          "slic_compactness": 10.0,
+          "region_balance": 0.25
+        },
+        "render": {
+          "preview_cell_px": 16,
+          "numbered_cell_px": 44,
+          "line_width": 2,
+          "number_scale": 0.34,
+          "number_gray": 10,
+          "font_path": null
+        },
+        "seed": 42
+      }
+    },
+    {
+      "id": "bedd7857d6",
+      "stage": "2_engines",
+      "name": "gentle",
+      "engine": "B",
+      "grid": [
+        22,
+        33
+      ],
+      "cell_mm": 4.068,
+      "label_hash": "6043f0e8f66814ad934b0dee1c5d20b3e1113440ef7fc286547021940c7efafc",
+      "score": 67.29,
+      "metrics": {
+        "DeltaE00_mean_vs_source": 15.5816,
+        "DeltaE00_median_vs_source": 11.9801,
+        "DeltaE00_p95_vs_source": 39.5222,
+        "DeltaE00_mean_vs_processed": 15.4414,
+        "SSIM_vs_source": 0.2794,
+        "Edge_F1_1px": 0.414,
+        "Edge_precision": 0.6052,
+        "Edge_recall": 0.3146,
+        "colors_used": 18,
+        "palette_utilization_pct": 85.7143,
+        "singleton_ratio_pct": 15.1515,
+        "tiny_component_ratio_pct": 18.8705,
+        "connected_components": 195,
+        "transition_rate_pct": 52.7559,
+        "runtime_seconds": 0.0001,
+        "cell_structure_f1": 0.7988,
+        "source_transition_rate_pct": 68.2176,
+        "transition_gap_pp": 15.4617
+      },
+      "stability": null,
+      "config": {
+        "framing": {
+          "crop_enabled": false,
+          "crop": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "content_zoom": 1.0,
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "padding": 0.0,
+          "snap_square_cells": true,
+          "working_max_side": 320
+        },
+        "preprocess": {
+          "brightness": 0.0,
+          "contrast": 1.0,
+          "illumination_strength": 0.12,
+          "illumination_sigma": 0.1,
+          "clahe_clip": 0.8,
+          "clahe_tiles": 8,
+          "denoise_method": "bilateral",
+          "denoise_strength": 10.0,
+          "sharpen_fine": 0.15,
+          "sharpen_coarse": 0.05
+        },
+        "edges": {
+          "auto_canny": true,
+          "canny_low": 55,
+          "canny_high": 145,
+          "close_iter": 1,
+          "scharr_weight": 0.75,
+          "sensitivity": 1.0
+        },
+        "mapping": {
+          "grid_cols": 22,
+          "max_samples": 96,
+          "trim_fraction": 0.03,
+          "sampling": "stratified",
+          "smoothness_lambda": 1.8,
+          "boundary_beta": 4.0,
+          "icm_iterations": 5,
+          "slic_segments": 320,
+          "slic_compactness": 10.0,
+          "region_balance": 0.25
+        },
+        "render": {
+          "preview_cell_px": 16,
+          "numbered_cell_px": 44,
+          "line_width": 2,
+          "number_scale": 0.34,
+          "number_gray": 10,
+          "font_path": null
+        },
+        "seed": 42
+      }
+    },
+    {
+      "id": "b1aaeea8ec",
+      "stage": "2_engines",
+      "name": "gentle",
+      "engine": "C",
+      "grid": [
+        22,
+        33
+      ],
+      "cell_mm": 4.068,
+      "label_hash": "42215b20ac287c47d300c8a9699bf1a48a4e97ff572c7d404534dddd97379b9e",
+      "score": 49.48,
+      "metrics": {
+        "DeltaE00_mean_vs_source": 15.6229,
+        "DeltaE00_median_vs_source": 11.8262,
+        "DeltaE00_p95_vs_source": 40.5812,
+        "DeltaE00_mean_vs_processed": 15.4835,
+        "SSIM_vs_source": 0.2864,
+        "Edge_F1_1px": 0.4027,
+        "Edge_precision": 0.6279,
+        "Edge_recall": 0.2964,
+        "colors_used": 17,
+        "palette_utilization_pct": 80.9524,
+        "singleton_ratio_pct": 10.4683,
+        "tiny_component_ratio_pct": 14.1873,
+        "connected_components": 159,
+        "transition_rate_pct": 47.602,
+        "runtime_seconds": 0.0276,
+        "cell_structure_f1": 0.7676,
+        "source_transition_rate_pct": 68.2176,
+        "transition_gap_pp": 20.6156
+      },
+      "stability": null,
+      "config": {
+        "framing": {
+          "crop_enabled": false,
+          "crop": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "content_zoom": 1.0,
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "padding": 0.0,
+          "snap_square_cells": true,
+          "working_max_side": 320
+        },
+        "preprocess": {
+          "brightness": 0.0,
+          "contrast": 1.0,
+          "illumination_strength": 0.12,
+          "illumination_sigma": 0.1,
+          "clahe_clip": 0.8,
+          "clahe_tiles": 8,
+          "denoise_method": "bilateral",
+          "denoise_strength": 10.0,
+          "sharpen_fine": 0.15,
+          "sharpen_coarse": 0.05
+        },
+        "edges": {
+          "auto_canny": true,
+          "canny_low": 55,
+          "canny_high": 145,
+          "close_iter": 1,
+          "scharr_weight": 0.75,
+          "sensitivity": 1.0
+        },
+        "mapping": {
+          "grid_cols": 22,
+          "max_samples": 96,
+          "trim_fraction": 0.03,
+          "sampling": "stratified",
+          "smoothness_lambda": 1.8,
+          "boundary_beta": 4.0,
+          "icm_iterations": 5,
+          "slic_segments": 320,
+          "slic_compactness": 10.0,
+          "region_balance": 0.25
+        },
+        "render": {
+          "preview_cell_px": 16,
+          "numbered_cell_px": 44,
+          "line_width": 2,
+          "number_scale": 0.34,
+          "number_gray": 10,
+          "font_path": null
+        },
+        "seed": 42
+      }
+    },
+    {
+      "id": "b64ce438b2",
+      "stage": "2_engines",
+      "name": "gentle",
+      "engine": "D",
+      "grid": [
+        22,
+        33
+      ],
+      "cell_mm": 4.068,
+      "label_hash": "5a351c4e5e659af07f0aed9cfaf1284f5e44697e6491abbdcf88a44e059a86f5",
+      "score": 63.69,
+      "metrics": {
+        "DeltaE00_mean_vs_source": 15.565,
+        "DeltaE00_median_vs_source": 11.957,
+        "DeltaE00_p95_vs_source": 39.7566,
+        "DeltaE00_mean_vs_processed": 15.4445,
+        "SSIM_vs_source": 0.2821,
+        "Edge_F1_1px": 0.4095,
+        "Edge_precision": 0.6107,
+        "Edge_recall": 0.308,
+        "colors_used": 16,
+        "palette_utilization_pct": 76.1905,
+        "singleton_ratio_pct": 12.6722,
+        "tiny_component_ratio_pct": 16.3912,
+        "connected_components": 178,
+        "transition_rate_pct": 51.0379,
+        "runtime_seconds": 0.4127,
+        "cell_structure_f1": 0.7863,
+        "source_transition_rate_pct": 68.2176,
+        "transition_gap_pp": 17.1797
+      },
+      "stability": null,
+      "config": {
+        "framing": {
+          "crop_enabled": false,
+          "crop": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "content_zoom": 1.0,
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "padding": 0.0,
+          "snap_square_cells": true,
+          "working_max_side": 320
+        },
+        "preprocess": {
+          "brightness": 0.0,
+          "contrast": 1.0,
+          "illumination_strength": 0.12,
+          "illumination_sigma": 0.1,
+          "clahe_clip": 0.8,
+          "clahe_tiles": 8,
+          "denoise_method": "bilateral",
+          "denoise_strength": 10.0,
+          "sharpen_fine": 0.15,
+          "sharpen_coarse": 0.05
+        },
+        "edges": {
+          "auto_canny": true,
+          "canny_low": 55,
+          "canny_high": 145,
+          "close_iter": 1,
+          "scharr_weight": 0.75,
+          "sensitivity": 1.0
+        },
+        "mapping": {
+          "grid_cols": 22,
+          "max_samples": 96,
+          "trim_fraction": 0.03,
+          "sampling": "stratified",
+          "smoothness_lambda": 1.8,
+          "boundary_beta": 4.0,
+          "icm_iterations": 5,
+          "slic_segments": 320,
+          "slic_compactness": 10.0,
+          "region_balance": 0.25
+        },
+        "render": {
+          "preview_cell_px": 16,
+          "numbered_cell_px": 44,
+          "line_width": 2,
+          "number_scale": 0.34,
+          "number_gray": 10,
+          "font_path": null
+        },
+        "seed": 42
+      }
+    },
+    {
+      "id": "93bfac4166",
+      "stage": "3_resolution",
+      "name": "minimal",
+      "engine": "B",
+      "grid": [
+        16,
+        24
+      ],
+      "cell_mm": 5.594,
+      "label_hash": "888ff83bdd06b605ce2e0fd043518e748e6d4508c857485a3bc98044cc0d3fa2",
+      "score": null,
+      "metrics": {
+        "DeltaE00_mean_vs_source": 16.4495,
+        "DeltaE00_median_vs_source": 12.6275,
+        "DeltaE00_p95_vs_source": 40.2104,
+        "DeltaE00_mean_vs_processed": 16.4495,
+        "SSIM_vs_source": 0.2638,
+        "Edge_F1_1px": 0.3304,
+        "Edge_precision": 0.5644,
+        "Edge_recall": 0.2336,
+        "colors_used": 15,
+        "palette_utilization_pct": 71.4286,
+        "singleton_ratio_pct": 19.0104,
+        "tiny_component_ratio_pct": 25.5208,
+        "connected_components": 137,
+        "transition_rate_pct": 60.4396,
+        "runtime_seconds": 0.0001,
+        "cell_structure_f1": 0.8452,
+        "source_transition_rate_pct": 74.4505,
+        "transition_gap_pp": 14.011
+      },
+      "stability": null,
+      "config": {
+        "framing": {
+          "crop_enabled": false,
+          "crop": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "content_zoom": 1.0,
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "padding": 0.0,
+          "snap_square_cells": true,
+          "working_max_side": 320
+        },
+        "preprocess": {
+          "brightness": 0.0,
+          "contrast": 1.0,
+          "illumination_strength": 0.0,
+          "illumination_sigma": 0.1,
+          "clahe_clip": 0.0,
+          "clahe_tiles": 8,
+          "denoise_method": "bilateral",
+          "denoise_strength": 0.0,
+          "sharpen_fine": 0.0,
+          "sharpen_coarse": 0.0
+        },
+        "edges": {
+          "auto_canny": true,
+          "canny_low": 55,
+          "canny_high": 145,
+          "close_iter": 1,
+          "scharr_weight": 0.75,
+          "sensitivity": 1.0
+        },
+        "mapping": {
+          "grid_cols": 16,
+          "max_samples": 96,
+          "trim_fraction": 0.03,
+          "sampling": "stratified",
+          "smoothness_lambda": 1.8,
+          "boundary_beta": 4.0,
+          "icm_iterations": 5,
+          "slic_segments": 320,
+          "slic_compactness": 10.0,
+          "region_balance": 0.25
+        },
+        "render": {
+          "preview_cell_px": 16,
+          "numbered_cell_px": 44,
+          "line_width": 2,
+          "number_scale": 0.34,
+          "number_gray": 10,
+          "font_path": null
+        },
+        "seed": 42
+      }
+    },
+    {
+      "id": "37b43c36f7",
+      "stage": "3_resolution",
+      "name": "minimal",
+      "engine": "B",
+      "grid": [
+        22,
+        33
+      ],
+      "cell_mm": 4.068,
+      "label_hash": "7506738f155cef0e854837a901d671790830fa788a18de2033f5043102028b8d",
+      "score": null,
+      "metrics": {
+        "DeltaE00_mean_vs_source": 15.2615,
+        "DeltaE00_median_vs_source": 12.0318,
+        "DeltaE00_p95_vs_source": 38.2566,
+        "DeltaE00_mean_vs_processed": 15.2615,
+        "SSIM_vs_source": 0.2854,
+        "Edge_F1_1px": 0.3855,
+        "Edge_precision": 0.5939,
+        "Edge_recall": 0.2853,
+        "colors_used": 16,
+        "palette_utilization_pct": 76.1905,
+        "singleton_ratio_pct": 14.3251,
+        "tiny_component_ratio_pct": 18.1818,
+        "connected_components": 190,
+        "transition_rate_pct": 51.3243,
+        "runtime_seconds": 0.0001,
+        "cell_structure_f1": 0.7988,
+        "source_transition_rate_pct": 68.2176,
+        "transition_gap_pp": 16.8933
+      },
+      "stability": null,
+      "config": {
+        "framing": {
+          "crop_enabled": false,
+          "crop": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "content_zoom": 1.0,
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "padding": 0.0,
+          "snap_square_cells": true,
+          "working_max_side": 320
+        },
+        "preprocess": {
+          "brightness": 0.0,
+          "contrast": 1.0,
+          "illumination_strength": 0.0,
+          "illumination_sigma": 0.1,
+          "clahe_clip": 0.0,
+          "clahe_tiles": 8,
+          "denoise_method": "bilateral",
+          "denoise_strength": 0.0,
+          "sharpen_fine": 0.0,
+          "sharpen_coarse": 0.0
+        },
+        "edges": {
+          "auto_canny": true,
+          "canny_low": 55,
+          "canny_high": 145,
+          "close_iter": 1,
+          "scharr_weight": 0.75,
+          "sensitivity": 1.0
+        },
+        "mapping": {
+          "grid_cols": 22,
+          "max_samples": 96,
+          "trim_fraction": 0.03,
+          "sampling": "stratified",
+          "smoothness_lambda": 1.8,
+          "boundary_beta": 4.0,
+          "icm_iterations": 5,
+          "slic_segments": 320,
+          "slic_compactness": 10.0,
+          "region_balance": 0.25
+        },
+        "render": {
+          "preview_cell_px": 16,
+          "numbered_cell_px": 44,
+          "line_width": 2,
+          "number_scale": 0.34,
+          "number_gray": 10,
+          "font_path": null
+        },
+        "seed": 42
+      }
+    },
+    {
+      "id": "351453d074",
+      "stage": "3_resolution",
+      "name": "minimal",
+      "engine": "B",
+      "grid": [
+        28,
+        42
+      ],
+      "cell_mm": 3.196,
+      "label_hash": "46c480b9fbecfd455bb477a4c287b7878acc904c21ea2b1fd0c2281e73e17b98",
+      "score": null,
+      "metrics": {
+        "DeltaE00_mean_vs_source": 14.3059,
+        "DeltaE00_median_vs_source": 11.5947,
+        "DeltaE00_p95_vs_source": 35.4723,
+        "DeltaE00_mean_vs_processed": 14.3059,
+        "SSIM_vs_source": 0.3208,
+        "Edge_F1_1px": 0.4619,
+        "Edge_precision": 0.6671,
+        "Edge_recall": 0.3532,
+        "colors_used": 18,
+        "palette_utilization_pct": 85.7143,
+        "singleton_ratio_pct": 9.4388,
+        "tiny_component_ratio_pct": 11.0544,
+        "connected_components": 217,
+        "transition_rate_pct": 43.6021,
+        "runtime_seconds": 0.0001,
+        "cell_structure_f1": 0.7692,
+        "source_transition_rate_pct": 60.4294,
+        "transition_gap_pp": 16.8273
+      },
+      "stability": null,
+      "config": {
+        "framing": {
+          "crop_enabled": false,
+          "crop": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "content_zoom": 1.0,
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "padding": 0.0,
+          "snap_square_cells": true,
+          "working_max_side": 320
+        },
+        "preprocess": {
+          "brightness": 0.0,
+          "contrast": 1.0,
+          "illumination_strength": 0.0,
+          "illumination_sigma": 0.1,
+          "clahe_clip": 0.0,
+          "clahe_tiles": 8,
+          "denoise_method": "bilateral",
+          "denoise_strength": 0.0,
+          "sharpen_fine": 0.0,
+          "sharpen_coarse": 0.0
+        },
+        "edges": {
+          "auto_canny": true,
+          "canny_low": 55,
+          "canny_high": 145,
+          "close_iter": 1,
+          "scharr_weight": 0.75,
+          "sensitivity": 1.0
+        },
+        "mapping": {
+          "grid_cols": 28,
+          "max_samples": 96,
+          "trim_fraction": 0.03,
+          "sampling": "stratified",
+          "smoothness_lambda": 1.8,
+          "boundary_beta": 4.0,
+          "icm_iterations": 5,
+          "slic_segments": 320,
+          "slic_compactness": 10.0,
+          "region_balance": 0.25
+        },
+        "render": {
+          "preview_cell_px": 16,
+          "numbered_cell_px": 44,
+          "line_width": 2,
+          "number_scale": 0.34,
+          "number_gray": 10,
+          "font_path": null
+        },
+        "seed": 42
+      }
+    },
+    {
+      "id": "29757a8876",
+      "stage": "4_final",
+      "name": "minimal",
+      "engine": "B",
+      "grid": [
+        28,
+        42
+      ],
+      "cell_mm": 3.196,
+      "label_hash": "b5efda62aaae2513ebae34b331fa914192681af98ddc119af9925a47a0120a9e",
+      "score": 85.0,
+      "metrics": {
+        "DeltaE00_mean_vs_source": 14.52,
+        "DeltaE00_median_vs_source": 11.6063,
+        "DeltaE00_p95_vs_source": 36.6998,
+        "DeltaE00_mean_vs_processed": 14.52,
+        "SSIM_vs_source": 0.4011,
+        "Edge_F1_1px": 0.1992,
+        "Edge_precision": 0.385,
+        "Edge_recall": 0.1344,
+        "colors_used": 17,
+        "palette_utilization_pct": 80.9524,
+        "singleton_ratio_pct": 9.6939,
+        "tiny_component_ratio_pct": 11.2245,
+        "connected_components": 214,
+        "transition_rate_pct": 43.2077,
+        "runtime_seconds": 0.0001,
+        "cell_structure_f1": 0.7682,
+        "source_transition_rate_pct": 60.3856,
+        "transition_gap_pp": 17.1779
+      },
+      "stability": {
+        "engine": "B - Cell-wise CIEDE2000",
+        "agreement_L_minus1_pct": 96.34353741496598,
+        "agreement_L_plus1_pct": 96.51360544217688,
+        "mean_stability_pct": 96.42857142857143
+      },
+      "config": {
+        "framing": {
+          "crop_enabled": false,
+          "crop": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "content_zoom": 1.0,
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "padding": 0.0,
+          "snap_square_cells": true,
+          "working_max_side": 900
+        },
+        "preprocess": {
+          "brightness": 0.0,
+          "contrast": 1.0,
+          "illumination_strength": 0.0,
+          "illumination_sigma": 0.1,
+          "clahe_clip": 0.0,
+          "clahe_tiles": 8,
+          "denoise_method": "bilateral",
+          "denoise_strength": 0.0,
+          "sharpen_fine": 0.0,
+          "sharpen_coarse": 0.0
+        },
+        "edges": {
+          "auto_canny": true,
+          "canny_low": 55,
+          "canny_high": 145,
+          "close_iter": 1,
+          "scharr_weight": 0.75,
+          "sensitivity": 1.0
+        },
+        "mapping": {
+          "grid_cols": 28,
+          "max_samples": 96,
+          "trim_fraction": 0.03,
+          "sampling": "stratified",
+          "smoothness_lambda": 1.8,
+          "boundary_beta": 4.0,
+          "icm_iterations": 5,
+          "slic_segments": 320,
+          "slic_compactness": 10.0,
+          "region_balance": 0.25
+        },
+        "render": {
+          "preview_cell_px": 16,
+          "numbered_cell_px": 44,
+          "line_width": 2,
+          "number_scale": 0.34,
+          "number_gray": 10,
+          "font_path": null
+        },
+        "seed": 42
+      }
+    },
+    {
+      "id": "9a1b891e42",
+      "stage": "4_final",
+      "name": "minimal",
+      "engine": "D",
+      "grid": [
+        28,
+        42
+      ],
+      "cell_mm": 3.196,
+      "label_hash": "490ff2068d15a05f2c16e31ea73570ea780489cfe22bc23d4e2ae3c0952c08c1",
+      "score": 65.0,
+      "metrics": {
+        "DeltaE00_mean_vs_source": 14.553,
+        "DeltaE00_median_vs_source": 11.5877,
+        "DeltaE00_p95_vs_source": 37.1149,
+        "DeltaE00_mean_vs_processed": 14.553,
+        "SSIM_vs_source": 0.4052,
+        "Edge_F1_1px": 0.1944,
+        "Edge_precision": 0.398,
+        "Edge_recall": 0.1286,
+        "colors_used": 17,
+        "palette_utilization_pct": 80.9524,
+        "singleton_ratio_pct": 5.9524,
+        "tiny_component_ratio_pct": 7.6531,
+        "connected_components": 170,
+        "transition_rate_pct": 39.9211,
+        "runtime_seconds": 0.9378,
+        "cell_structure_f1": 0.7348,
+        "source_transition_rate_pct": 60.3856,
+        "transition_gap_pp": 20.4645
+      },
+      "stability": {
+        "engine": "D - SLIC Region-Aware ICM",
+        "agreement_L_minus1_pct": 97.02380952380952,
+        "agreement_L_plus1_pct": 96.5986394557823,
+        "mean_stability_pct": 96.8112244897959
+      },
+      "config": {
+        "framing": {
+          "crop_enabled": false,
+          "crop": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "content_zoom": 1.0,
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "padding": 0.0,
+          "snap_square_cells": true,
+          "working_max_side": 900
+        },
+        "preprocess": {
+          "brightness": 0.0,
+          "contrast": 1.0,
+          "illumination_strength": 0.0,
+          "illumination_sigma": 0.1,
+          "clahe_clip": 0.0,
+          "clahe_tiles": 8,
+          "denoise_method": "bilateral",
+          "denoise_strength": 0.0,
+          "sharpen_fine": 0.0,
+          "sharpen_coarse": 0.0
+        },
+        "edges": {
+          "auto_canny": true,
+          "canny_low": 55,
+          "canny_high": 145,
+          "close_iter": 1,
+          "scharr_weight": 0.75,
+          "sensitivity": 1.0
+        },
+        "mapping": {
+          "grid_cols": 28,
+          "max_samples": 96,
+          "trim_fraction": 0.03,
+          "sampling": "stratified",
+          "smoothness_lambda": 1.8,
+          "boundary_beta": 4.0,
+          "icm_iterations": 5,
+          "slic_segments": 320,
+          "slic_compactness": 10.0,
+          "region_balance": 0.25
+        },
+        "render": {
+          "preview_cell_px": 16,
+          "numbered_cell_px": 44,
+          "line_width": 2,
+          "number_scale": 0.34,
+          "number_gray": 10,
+          "font_path": null
+        },
+        "seed": 42
+      }
+    }
+  ],
+  "ranking": [
+    {
+      "id": "29757a8876",
+      "stage": "4_final",
+      "name": "minimal",
+      "engine": "B",
+      "grid": [
+        28,
+        42
+      ],
+      "cell_mm": 3.196,
+      "label_hash": "b5efda62aaae2513ebae34b331fa914192681af98ddc119af9925a47a0120a9e",
+      "score": 85.0,
+      "metrics": {
+        "DeltaE00_mean_vs_source": 14.52,
+        "DeltaE00_median_vs_source": 11.6063,
+        "DeltaE00_p95_vs_source": 36.6998,
+        "DeltaE00_mean_vs_processed": 14.52,
+        "SSIM_vs_source": 0.4011,
+        "Edge_F1_1px": 0.1992,
+        "Edge_precision": 0.385,
+        "Edge_recall": 0.1344,
+        "colors_used": 17,
+        "palette_utilization_pct": 80.9524,
+        "singleton_ratio_pct": 9.6939,
+        "tiny_component_ratio_pct": 11.2245,
+        "connected_components": 214,
+        "transition_rate_pct": 43.2077,
+        "runtime_seconds": 0.0001,
+        "cell_structure_f1": 0.7682,
+        "source_transition_rate_pct": 60.3856,
+        "transition_gap_pp": 17.1779
+      },
+      "stability": {
+        "engine": "B - Cell-wise CIEDE2000",
+        "agreement_L_minus1_pct": 96.34353741496598,
+        "agreement_L_plus1_pct": 96.51360544217688,
+        "mean_stability_pct": 96.42857142857143
+      },
+      "config": {
+        "framing": {
+          "crop_enabled": false,
+          "crop": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "content_zoom": 1.0,
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "padding": 0.0,
+          "snap_square_cells": true,
+          "working_max_side": 900
+        },
+        "preprocess": {
+          "brightness": 0.0,
+          "contrast": 1.0,
+          "illumination_strength": 0.0,
+          "illumination_sigma": 0.1,
+          "clahe_clip": 0.0,
+          "clahe_tiles": 8,
+          "denoise_method": "bilateral",
+          "denoise_strength": 0.0,
+          "sharpen_fine": 0.0,
+          "sharpen_coarse": 0.0
+        },
+        "edges": {
+          "auto_canny": true,
+          "canny_low": 55,
+          "canny_high": 145,
+          "close_iter": 1,
+          "scharr_weight": 0.75,
+          "sensitivity": 1.0
+        },
+        "mapping": {
+          "grid_cols": 28,
+          "max_samples": 96,
+          "trim_fraction": 0.03,
+          "sampling": "stratified",
+          "smoothness_lambda": 1.8,
+          "boundary_beta": 4.0,
+          "icm_iterations": 5,
+          "slic_segments": 320,
+          "slic_compactness": 10.0,
+          "region_balance": 0.25
+        },
+        "render": {
+          "preview_cell_px": 16,
+          "numbered_cell_px": 44,
+          "line_width": 2,
+          "number_scale": 0.34,
+          "number_gray": 10,
+          "font_path": null
+        },
+        "seed": 42
+      }
+    },
+    {
+      "id": "9a1b891e42",
+      "stage": "4_final",
+      "name": "minimal",
+      "engine": "D",
+      "grid": [
+        28,
+        42
+      ],
+      "cell_mm": 3.196,
+      "label_hash": "490ff2068d15a05f2c16e31ea73570ea780489cfe22bc23d4e2ae3c0952c08c1",
+      "score": 65.0,
+      "metrics": {
+        "DeltaE00_mean_vs_source": 14.553,
+        "DeltaE00_median_vs_source": 11.5877,
+        "DeltaE00_p95_vs_source": 37.1149,
+        "DeltaE00_mean_vs_processed": 14.553,
+        "SSIM_vs_source": 0.4052,
+        "Edge_F1_1px": 0.1944,
+        "Edge_precision": 0.398,
+        "Edge_recall": 0.1286,
+        "colors_used": 17,
+        "palette_utilization_pct": 80.9524,
+        "singleton_ratio_pct": 5.9524,
+        "tiny_component_ratio_pct": 7.6531,
+        "connected_components": 170,
+        "transition_rate_pct": 39.9211,
+        "runtime_seconds": 0.9378,
+        "cell_structure_f1": 0.7348,
+        "source_transition_rate_pct": 60.3856,
+        "transition_gap_pp": 20.4645
+      },
+      "stability": {
+        "engine": "D - SLIC Region-Aware ICM",
+        "agreement_L_minus1_pct": 97.02380952380952,
+        "agreement_L_plus1_pct": 96.5986394557823,
+        "mean_stability_pct": 96.8112244897959
+      },
+      "config": {
+        "framing": {
+          "crop_enabled": false,
+          "crop": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "content_zoom": 1.0,
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "padding": 0.0,
+          "snap_square_cells": true,
+          "working_max_side": 900
+        },
+        "preprocess": {
+          "brightness": 0.0,
+          "contrast": 1.0,
+          "illumination_strength": 0.0,
+          "illumination_sigma": 0.1,
+          "clahe_clip": 0.0,
+          "clahe_tiles": 8,
+          "denoise_method": "bilateral",
+          "denoise_strength": 0.0,
+          "sharpen_fine": 0.0,
+          "sharpen_coarse": 0.0
+        },
+        "edges": {
+          "auto_canny": true,
+          "canny_low": 55,
+          "canny_high": 145,
+          "close_iter": 1,
+          "scharr_weight": 0.75,
+          "sensitivity": 1.0
+        },
+        "mapping": {
+          "grid_cols": 28,
+          "max_samples": 96,
+          "trim_fraction": 0.03,
+          "sampling": "stratified",
+          "smoothness_lambda": 1.8,
+          "boundary_beta": 4.0,
+          "icm_iterations": 5,
+          "slic_segments": 320,
+          "slic_compactness": 10.0,
+          "region_balance": 0.25
+        },
+        "render": {
+          "preview_cell_px": 16,
+          "numbered_cell_px": 44,
+          "line_width": 2,
+          "number_scale": 0.34,
+          "number_gray": 10,
+          "font_path": null
+        },
+        "seed": 42
+      }
+    }
+  ],
+  "recommendation": {
+    "id": "29757a8876",
+    "stage": "4_final",
+    "name": "minimal",
+    "engine": "B",
+    "grid": [
+      28,
+      42
+    ],
+    "cell_mm": 3.196,
+    "label_hash": "b5efda62aaae2513ebae34b331fa914192681af98ddc119af9925a47a0120a9e",
+    "score": 85.0,
+    "metrics": {
+      "DeltaE00_mean_vs_source": 14.52,
+      "DeltaE00_median_vs_source": 11.6063,
+      "DeltaE00_p95_vs_source": 36.6998,
+      "DeltaE00_mean_vs_processed": 14.52,
+      "SSIM_vs_source": 0.4011,
+      "Edge_F1_1px": 0.1992,
+      "Edge_precision": 0.385,
+      "Edge_recall": 0.1344,
+      "colors_used": 17,
+      "palette_utilization_pct": 80.9524,
+      "singleton_ratio_pct": 9.6939,
+      "tiny_component_ratio_pct": 11.2245,
+      "connected_components": 214,
+      "transition_rate_pct": 43.2077,
+      "runtime_seconds": 0.0001,
+      "cell_structure_f1": 0.7682,
+      "source_transition_rate_pct": 60.3856,
+      "transition_gap_pp": 17.1779
+    },
+    "stability": {
+      "engine": "B - Cell-wise CIEDE2000",
+      "agreement_L_minus1_pct": 96.34353741496598,
+      "agreement_L_plus1_pct": 96.51360544217688,
+      "mean_stability_pct": 96.42857142857143
+    },
+    "config": {
+      "framing": {
+        "crop_enabled": false,
+        "crop": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "content_zoom": 1.0,
+        "focus": [
+          0.5,
+          0.5
+        ],
+        "padding": 0.0,
+        "snap_square_cells": true,
+        "working_max_side": 900
+      },
+      "preprocess": {
+        "brightness": 0.0,
+        "contrast": 1.0,
+        "illumination_strength": 0.0,
+        "illumination_sigma": 0.1,
+        "clahe_clip": 0.0,
+        "clahe_tiles": 8,
+        "denoise_method": "bilateral",
+        "denoise_strength": 0.0,
+        "sharpen_fine": 0.0,
+        "sharpen_coarse": 0.0
+      },
+      "edges": {
+        "auto_canny": true,
+        "canny_low": 55,
+        "canny_high": 145,
+        "close_iter": 1,
+        "scharr_weight": 0.75,
+        "sensitivity": 1.0
+      },
+      "mapping": {
+        "grid_cols": 28,
+        "max_samples": 96,
+        "trim_fraction": 0.03,
+        "sampling": "stratified",
+        "smoothness_lambda": 1.8,
+        "boundary_beta": 4.0,
+        "icm_iterations": 5,
+        "slic_segments": 320,
+        "slic_compactness": 10.0,
+        "region_balance": 0.25
+      },
+      "render": {
+        "preview_cell_px": 16,
+        "numbered_cell_px": 44,
+        "line_width": 2,
+        "number_scale": 0.34,
+        "number_gray": 10,
+        "font_path": null
+      },
+      "seed": 42
+    },
+    "confidence": {
+      "level": "high",
+      "value": 93,
+      "reasons": [
+        "score margin to runner-up 20.0 pts",
+        "4/5 metrics favour the winner",
+        "+/-1 L* stability 96.4 %"
+      ]
+    },
+    "framing": "full",
+    "preprocess": "minimal",
+    "why": [
+      "hard constraint: cell 3.196 mm >= 3.0 mm",
+      "grid: smallest grid whose next step gains < 0.35 dE00 (diminishing returns; larger cells are easier to colour)",
+      "best of 2 finalists on normalised metrics",
+      "score margin to runner-up 20.0 pts",
+      "4/5 metrics favour the winner",
+      "+/-1 L* stability 96.4 %"
+    ]
+  },
+  "alternatives": [
+    {
+      "id": "9a1b891e42",
+      "stage": "4_final",
+      "name": "minimal",
+      "engine": "D",
+      "grid": [
+        28,
+        42
+      ],
+      "cell_mm": 3.196,
+      "label_hash": "490ff2068d15a05f2c16e31ea73570ea780489cfe22bc23d4e2ae3c0952c08c1",
+      "score": 65.0,
+      "metrics": {
+        "DeltaE00_mean_vs_source": 14.553,
+        "DeltaE00_median_vs_source": 11.5877,
+        "DeltaE00_p95_vs_source": 37.1149,
+        "DeltaE00_mean_vs_processed": 14.553,
+        "SSIM_vs_source": 0.4052,
+        "Edge_F1_1px": 0.1944,
+        "Edge_precision": 0.398,
+        "Edge_recall": 0.1286,
+        "colors_used": 17,
+        "palette_utilization_pct": 80.9524,
+        "singleton_ratio_pct": 5.9524,
+        "tiny_component_ratio_pct": 7.6531,
+        "connected_components": 170,
+        "transition_rate_pct": 39.9211,
+        "runtime_seconds": 0.9378,
+        "cell_structure_f1": 0.7348,
+        "source_transition_rate_pct": 60.3856,
+        "transition_gap_pp": 20.4645
+      },
+      "stability": {
+        "engine": "D - SLIC Region-Aware ICM",
+        "agreement_L_minus1_pct": 97.02380952380952,
+        "agreement_L_plus1_pct": 96.5986394557823,
+        "mean_stability_pct": 96.8112244897959
+      },
+      "config": {
+        "framing": {
+          "crop_enabled": false,
+          "crop": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "content_zoom": 1.0,
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "padding": 0.0,
+          "snap_square_cells": true,
+          "working_max_side": 900
+        },
+        "preprocess": {
+          "brightness": 0.0,
+          "contrast": 1.0,
+          "illumination_strength": 0.0,
+          "illumination_sigma": 0.1,
+          "clahe_clip": 0.0,
+          "clahe_tiles": 8,
+          "denoise_method": "bilateral",
+          "denoise_strength": 0.0,
+          "sharpen_fine": 0.0,
+          "sharpen_coarse": 0.0
+        },
+        "edges": {
+          "auto_canny": true,
+          "canny_low": 55,
+          "canny_high": 145,
+          "close_iter": 1,
+          "scharr_weight": 0.75,
+          "sensitivity": 1.0
+        },
+        "mapping": {
+          "grid_cols": 28,
+          "max_samples": 96,
+          "trim_fraction": 0.03,
+          "sampling": "stratified",
+          "smoothness_lambda": 1.8,
+          "boundary_beta": 4.0,
+          "icm_iterations": 5,
+          "slic_segments": 320,
+          "slic_compactness": 10.0,
+          "region_balance": 0.25
+        },
+        "render": {
+          "preview_cell_px": 16,
+          "numbered_cell_px": 44,
+          "line_width": 2,
+          "number_scale": 0.34,
+          "number_gray": 10,
+          "font_path": null
+        },
+        "seed": 42
+      }
+    }
+  ],
+  "framing_alternatives": [],
+  "resolution_curve": [
+    {
+      "cols": 16,
+      "rows": 24,
+      "cell_mm": 5.594,
+      "dE00_mean": 16.449,
+      "singleton_pct": 19.01
+    },
+    {
+      "cols": 22,
+      "rows": 33,
+      "cell_mm": 4.068,
+      "dE00_mean": 15.262,
+      "singleton_pct": 14.33
+    },
+    {
+      "cols": 28,
+      "rows": 42,
+      "cell_mm": 3.196,
+      "dE00_mean": 14.306,
+      "singleton_pct": 9.44
+    }
+  ],
+  "confidence": {
+    "level": "high",
+    "value": 93,
+    "reasons": [
+      "score margin to runner-up 20.0 pts",
+      "4/5 metrics favour the winner",
+      "+/-1 L* stability 96.4 %"
+    ]
+  },
+  "timings": {
+    "diagnostics_and_framing": 0.05,
+    "preprocess_screen": 1.06,
+    "engine_screen": 1.17,
+    "resolution_sweep": 0.67,
+    "finalists": 5.69,
+    "total": 8.64
+  },
+  "note": "Metrics rank candidates against each other; they do not certify the printed result. Visual QA by the owner is still required."
+}

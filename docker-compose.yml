@@ -1,0 +1,46 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: chromabook
+      POSTGRES_USER: chromabook
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U chromabook -d chromabook"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks: [internal]
+
+  web:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      SQL_HOST: db
+      SQL_DB_NAME: chromabook
+      SQL_USER: chromabook
+      SQL_PASSWORD: ${POSTGRES_PASSWORD}
+      SQL_ADMIN_USER: chromabook
+      SQL_ADMIN_PASSWORD: ${POSTGRES_PASSWORD}
+      CHROMABOOK_DATA_DIR: /data
+      MAX_UPLOAD_MB: ${MAX_UPLOAD_MB:-25}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+    volumes:
+      - chromabook_data:/data
+    ports:
+      - "127.0.0.1:${APP_PORT:-3000}:3000"
+    networks: [internal]
+
+volumes:
+  postgres_data:
+  chromabook_data:
+
+networks:
+  internal:
+    driver: bridge

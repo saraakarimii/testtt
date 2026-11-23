@@ -1,0 +1,37 @@
+{
+  "name": "chromabook-studio",
+  "version": "0.8.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "lint": "tsc --noEmit",
+    "test:image-profiles": "tsx scripts/test-image-profiles.ts",
+    "test:dual-layout": "tsx scripts/test-dual-layout.ts",
+    "db:generate": "drizzle-kit generate --config src/db/drizzle.config.ts",
+    "db:migrate": "tsx src/db/migrate.ts",
+    "db:migrate:prod": "node dist/src/db/migrate.js"
+  },
+  "dependencies": {
+    "@google/genai": "^3.6.1",
+    "@types/express": "^5.0.6",
+    "@types/multer": "^2.3.0",
+    "@types/node": "^26.6.6",
+    "@types/pdfkit": "^0.17.7",
+    "@types/pg": "^8.23.1",
+    "dotenv": "^18.0.10",
+    "drizzle-kit": "^0.31.11",
+    "drizzle-orm": "^0.45.4",
+    "esbuild": "^0.28.2",
+    "express": "^5.3.0",
+    "multer": "^2.5.0",
+    "pdfkit": "^0.21.0",
+    "pg": "^8.23.1",
+    "sharp": "^0.35.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "devDependencies": {}
+}

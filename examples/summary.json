@@ -1,0 +1,222 @@
+{
+  "tulips": {
+    "grid": "36x54",
+    "seconds_total": 4.8,
+    "engines": {
+      "A": {
+        "dE00_mean": 15.73,
+        "dE00_p95": 33.67,
+        "SSIM": 0.311,
+        "EdgeF1": 0.265,
+        "singleton_pct": 13.7,
+        "transition_pct": 50.7,
+        "colors_used": 17,
+        "stability_pct": 96.7,
+        "engine_s": 0.04
+      },
+      "B": {
+        "dE00_mean": 15.06,
+        "dE00_p95": 32.36,
+        "SSIM": 0.307,
+        "EdgeF1": 0.272,
+        "singleton_pct": 13.3,
+        "transition_pct": 49.7,
+        "colors_used": 18,
+        "stability_pct": 96.0,
+        "engine_s": 0.0
+      },
+      "C": {
+        "dE00_mean": 15.07,
+        "dE00_p95": 32.45,
+        "SSIM": 0.315,
+        "EdgeF1": 0.261,
+        "singleton_pct": 7.9,
+        "transition_pct": 43.2,
+        "colors_used": 18,
+        "stability_pct": 96.3,
+        "engine_s": 0.11
+      },
+      "D": {
+        "dE00_mean": 15.04,
+        "dE00_p95": 32.32,
+        "SSIM": 0.314,
+        "EdgeF1": 0.261,
+        "singleton_pct": 9.2,
+        "transition_pct": 44.5,
+        "colors_used": 18,
+        "stability_pct": 96.3,
+        "engine_s": 1.62
+      }
+    },
+    "label_agreement_900px_vs_full_res_B_pct": 94.6,
+    "original_px": [
+      736,
+      1104
+    ]
+  },
+  "unicorn": {
+    "grid": "36x54",
+    "seconds_total": 6.4,
+    "engines": {
+      "A": {
+        "dE00_mean": 14.86,
+        "dE00_p95": 31.92,
+        "SSIM": 0.515,
+        "EdgeF1": 0.249,
+        "singleton_pct": 15.1,
+        "transition_pct": 48.4,
+        "colors_used": 14,
+        "stability_pct": 96.9,
+        "engine_s": 0.06
+      },
+      "B": {
+        "dE00_mean": 14.29,
+        "dE00_p95": 33.54,
+        "SSIM": 0.53,
+        "EdgeF1": 0.254,
+        "singleton_pct": 10.0,
+        "transition_pct": 42.6,
+        "colors_used": 15,
+        "stability_pct": 96.6,
+        "engine_s": 0.0
+      },
+      "C": {
+        "dE00_mean": 14.32,
+        "dE00_p95": 34.73,
+        "SSIM": 0.541,
+        "EdgeF1": 0.243,
+        "singleton_pct": 4.4,
+        "transition_pct": 36.9,
+        "colors_used": 15,
+        "stability_pct": 96.4,
+        "engine_s": 0.12
+      },
+      "D": {
+        "dE00_mean": 14.24,
+        "dE00_p95": 33.82,
+        "SSIM": 0.537,
+        "EdgeF1": 0.246,
+        "singleton_pct": 5.9,
+        "transition_pct": 38.9,
+        "colors_used": 15,
+        "stability_pct": 96.2,
+        "engine_s": 2.27
+      }
+    },
+    "label_agreement_900px_vs_full_res_B_pct": 95.7,
+    "original_px": [
+      853,
+      1280
+    ]
+  },
+  "cat": {
+    "grid": "36x51",
+    "seconds_total": 5.1,
+    "engines": {
+      "A": {
+        "dE00_mean": 13.49,
+        "dE00_p95": 28.18,
+        "SSIM": 0.255,
+        "EdgeF1": 0.199,
+        "singleton_pct": 8.8,
+        "transition_pct": 38.2,
+        "colors_used": 15,
+        "stability_pct": 96.1,
+        "engine_s": 0.04
+      },
+      "B": {
+        "dE00_mean": 13.08,
+        "dE00_p95": 29.9,
+        "SSIM": 0.256,
+        "EdgeF1": 0.205,
+        "singleton_pct": 9.4,
+        "transition_pct": 40.2,
+        "colors_used": 15,
+        "stability_pct": 96.1,
+        "engine_s": 0.0
+      },
+      "C": {
+        "dE00_mean": 13.08,
+        "dE00_p95": 30.17,
+        "SSIM": 0.261,
+        "EdgeF1": 0.191,
+        "singleton_pct": 6.3,
+        "transition_pct": 35.2,
+        "colors_used": 15,
+        "stability_pct": 95.7,
+        "engine_s": 0.14
+      },
+      "D": {
+        "dE00_mean": 13.05,
+        "dE00_p95": 29.82,
+        "SSIM": 0.26,
+        "EdgeF1": 0.193,
+        "singleton_pct": 7.1,
+        "transition_pct": 36.1,
+        "colors_used": 15,
+        "stability_pct": 95.9,
+        "engine_s": 1.77
+      }
+    },
+    "label_agreement_900px_vs_full_res_B_pct": 92.3,
+    "original_px": [
+      736,
+      1104
+    ]
+  },
+  "mermaid": {
+    "grid": "36x54",
+    "seconds_total": 4.7,
+    "engines": {
+      "A": {
+        "dE00_mean": 12.88,
+        "dE00_p95": 26.77,
+        "SSIM": 0.283,
+        "EdgeF1": 0.205,
+        "singleton_pct": 15.4,
+        "transition_pct": 48.4,
+        "colors_used": 18,
+        "stability_pct": 97.5,
+        "engine_s": 0.05
+      },
+      "B": {
+        "dE00_mean": 12.79,
+        "dE00_p95": 29.06,
+        "SSIM": 0.287,
+        "EdgeF1": 0.212,
+        "singleton_pct": 15.3,
+        "transition_pct": 46.9,
+        "colors_used": 19,
+        "stability_pct": 96.5,
+        "engine_s": 0.0
+      },
+      "C": {
+        "dE00_mean": 12.77,
+        "dE00_p95": 29.32,
+        "SSIM": 0.291,
+        "EdgeF1": 0.204,
+        "singleton_pct": 11.6,
+        "transition_pct": 42.7,
+        "colors_used": 19,
+        "stability_pct": 96.7,
+        "engine_s": 0.09
+      },
+      "D": {
+        "dE00_mean": 12.78,
+        "dE00_p95": 28.96,
+        "SSIM": 0.289,
+        "EdgeF1": 0.205,
+        "singleton_pct": 12.8,
+        "transition_pct": 44.2,
+        "colors_used": 19,
+        "stability_pct": 96.6,
+        "engine_s": 1.66
+      }
+    },
+    "label_agreement_900px_vs_full_res_B_pct": 92.9,
+    "original_px": [
+      736,
+      1104
+    ]
+  }
+}
