@@ -53,7 +53,7 @@ npm run dev                 # http://localhost:3000
 
 ## Docs
 
-`docs/SERVER_DEPLOYMENT.md`, `docs/LAYOUT_ENGINE.md`, `docs/HYBRID_MAPPING.md`, `docs/ARCHITECTURE.md`. The `PHASE*_REPORT.md` files are historical records from an earlier Python prototype and may mention tooling that is no longer included.
+`docs/CLOUD_RUN.md` (Google Cloud), `docs/SERVER_DEPLOYMENT.md`, `docs/LAYOUT_ENGINE.md`, `docs/HYBRID_MAPPING.md`, `docs/ARCHITECTURE.md`. The `PHASE*_REPORT.md` files are historical records from an earlier Python prototype and may mention tooling that is no longer included.
 
 ## Limitations
 
