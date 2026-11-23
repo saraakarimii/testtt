@@ -14,7 +14,9 @@
     "db:migrate": "tsx src/db/migrate.ts",
     "db:migrate:prod": "node dist/src/db/migrate.js",
     "test:verify": "tsx tests/verify_features.ts",
-    "process:image": "tsx scripts/run-image.ts"
+    "process:image": "tsx scripts/run-image.ts",
+    "optimize:image": "tsx scripts/optimize-image.ts",
+    "test:optimizer": "tsx scripts/test-grid-optimizer.ts"
   },
   "dependencies": {
     "@google/genai": "^3.6.1",

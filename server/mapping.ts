@@ -397,7 +397,7 @@ export function loadPalette(palettePath = PALETTE_PATH): PaletteColor[] {
 
 // --- Image Processing Primitives ---
 
-interface RgbImage {
+export interface RgbImage {
   data: Uint8Array;
   width: number;
   height: number;
@@ -2093,46 +2093,40 @@ export interface RunImageOptions {
   warnings?: string[];
 }
 
-export async function runImageAndSave(
-  imagePath: string,
-  outDir: string,
-  rawParams: Record<string, unknown> | undefined,
-  selectedEngine: string,
-  includeStability: boolean,
-  options?: RunImageOptions,
-): Promise<{
-  engine: string;
-  confidence: string;
-  totalRuntimeSeconds: number;
+export interface PreparedImage {
+  p: MappingParams;
+  palette: PaletteColor[];
+  whiteIdx: number;
+  reference: RgbImage;
+  fgMask: Uint8Array | null;
+  processed: RgbImage;
+  processedLab: Float32Array;
+  edgeMap: ReturnType<typeof extractEdges>;
+  slic: ReturnType<typeof makeSlic>;
   warnings: string[];
-  autoSelection: Record<string, unknown> | null;
-}> {
-  const t0 = performance.now();
-  const reqEngine = selectedEngine.toUpperCase();
-  const isAutoEngine = reqEngine === 'AUTO';
-  if (!isAutoEngine && !ENGINE_NAMES[reqEngine]) {
-    throw new Error('selected_engine must be A, B, C, D or auto');
-  }
+}
 
+/** Preprocessing that does not depend on grid_cols; can be reused across many grid sizes. */
+export async function prepareImage(
+  imagePath: string,
+  p: MappingParams,
+  warnings: string[] = [],
+): Promise<PreparedImage> {
   const palette = loadPalette(PALETTE_PATH);
   const whiteIdx = palette.findIndex((c) => c.id === '05');
   if (whiteIdx < 0) {
     throw new Error('Palette is missing colour id "05" (White).');
   }
-
-  const p = validateParams(rawParams);
-  const runWarnings: string[] = [...(options?.warnings || [])];
-
   const reference = await loadCropResize(imagePath, p);
 
-  // Task 5: compute foreground mask right after loadCropResize and BEFORE illumination/CLAHE
+  // Foreground mask is computed right after loadCropResize and BEFORE illumination/CLAHE
   let fgMask: Uint8Array | null = null;
   if (p.bg_mode === 'simple') {
     fgMask = extractSimpleForegroundMask(reference, p.bg_tolerance);
   } else if (p.bg_mode === 'ai') {
     const aiRes = await extractAiForegroundMask(reference, p.bg_tolerance);
     fgMask = aiRes.mask;
-    runWarnings.push(...aiRes.warnings);
+    warnings.push(...aiRes.warnings);
   }
 
   const illum = illuminationCorrection(reference, p.illumination_strength, p.illumination_sigma, fgMask);
@@ -2143,14 +2137,19 @@ export async function runImageAndSave(
   const n = processed.width * processed.height;
   const processedLab = rgbBufferToLab(processed.data, n);
   const edgeMap = extractEdges(processed, p.canny_low, p.canny_high, p.auto_canny, p.edge_close);
+  const slic = makeSlic(processedLab, processed.width, processed.height, p.slic_segments, p.slic_compactness);
+  return { p, palette, whiteIdx, reference, fgMask, processed, processedLab, edgeMap, slic, warnings };
+}
+
+/** Builds the per-grid-size state and an engine runner for a given column count. */
+export function makeEngineRunner(prep: PreparedImage, cols: number, renderNumbered = true) {
+  const { p, palette, whiteIdx, reference, fgMask, processed, processedLab, edgeMap, slic } = prep;
   const { unary, geometry } = buildCellUnary(
-    processedLab, processed.width, processed.height, palette, p.grid_cols, p.max_samples, p.trim_fraction,
+    processedLab, processed.width, processed.height, palette, cols, p.max_samples, p.trim_fraction,
   );
   const cellFgMask = fgMask
     ? computeCellForegroundMask(fgMask, processed.width, geometry, p.bg_feather)
     : null;
-  const slic = makeSlic(processedLab, processed.width, processed.height, p.slic_segments, p.slic_compactness);
-
   const runEngine = async (
     key: string, labBuf: Float32Array, cellUnary: Float32Array,
   ): Promise<EngineRunResult> => {
@@ -2190,13 +2189,66 @@ export async function runImageAndSave(
     }
 
     const pixel = renderPixelPreview(labels, geometry, palette);
-    const numberedPng = await renderNumberedGridPng(
-      labels, geometry.rows, geometry.cols, palette, p.numbered_cell_px, p.numbered_line_width,
-    );
+    const numberedPng = renderNumbered
+      ? await renderNumberedGridPng(
+        labels, geometry.rows, geometry.cols, palette, p.numbered_cell_px, p.numbered_line_width,
+      )
+      : Buffer.alloc(0);
     const metrics = evaluateGrid(reference, labBuf, pixel, labels, geometry, fgMask) as Record<string, number>;
     metrics.runtime_seconds = (performance.now() - start) / 1000;
     return { key, name: ENGINE_NAMES[key], labels, pixel, numberedPng, metrics };
   };
+  return { geometry, unary, runEngine };
+}
+
+/** Same quality score that auto engine selection uses (higher is better). */
+export function engineQualityScore(m: Record<string, number>): number {
+  const W = AUTO_ENGINE_WEIGHTS;
+  const clamp01 = (v: number) => Math.max(0, Math.min(1, v));
+  const compactness = 1 - clamp01((m.singleton_ratio_pct ?? 0) / 30);
+  const deTerm = 1 - clamp01((m.DeltaE00_mean_vs_source ?? 25) / 25);
+  return (
+    W.ssim * (m.SSIM_vs_source ?? 0) +
+    W.edgeF1 * (m.Edge_F1_1px ?? 0) +
+    W.deltaE * deTerm +
+    W.compactness * compactness
+  );
+}
+
+export async function runImageAndSave(
+  imagePath: string,
+  outDir: string,
+  rawParams: Record<string, unknown> | undefined,
+  selectedEngine: string,
+  includeStability: boolean,
+  options?: RunImageOptions,
+): Promise<{
+  engine: string;
+  confidence: string;
+  totalRuntimeSeconds: number;
+  warnings: string[];
+  autoSelection: Record<string, unknown> | null;
+}> {
+  const t0 = performance.now();
+  const reqEngine = selectedEngine.toUpperCase();
+  const isAutoEngine = reqEngine === 'AUTO';
+  if (!isAutoEngine && !ENGINE_NAMES[reqEngine]) {
+    throw new Error('selected_engine must be A, B, C, D or auto');
+  }
+
+  const palette = loadPalette(PALETTE_PATH);
+  const whiteIdx = palette.findIndex((c) => c.id === '05');
+  if (whiteIdx < 0) {
+    throw new Error('Palette is missing colour id "05" (White).');
+  }
+
+  const p = validateParams(rawParams);
+  const runWarnings: string[] = [...(options?.warnings || [])];
+
+  const prep = await prepareImage(imagePath, p, runWarnings);
+  const { fgMask, processed, processedLab } = prep;
+  const n = processed.width * processed.height;
+  const { geometry, unary, runEngine } = makeEngineRunner(prep, p.grid_cols, true);
 
   const results: Record<string, EngineRunResult> = {};
   for (const key of ['A', 'B', 'C', 'D']) {

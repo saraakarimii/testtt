@@ -22,6 +22,7 @@ import {
   runImageAndSave,
 } from './server/mapping.js';
 import { AUTO_PRESET_META, PRESETS, resolveProcessRequest, type ProcessRequestPayload } from './server/presets.js';
+import { optimizeGrid } from './server/optimize.js';
 import { assembleDualLayoutBooks, type BookArtworkInput } from './server/book.js';
 import { attachLocalWorkspace, type WorkspaceRequest } from './src/middleware/workspace.js';
 import {
@@ -91,11 +92,30 @@ async function executeProcessJob(assetId: string, runId: string): Promise<void> 
       allowed_engines?: string[];
       warnings?: string[];
       run_stability?: boolean;
+      auto_grid?: boolean;
+      effort?: number;
+      explicit_params?: Record<string, unknown>;
       preset?: string | null;
       resolved_preset?: string | null;
       [k: string]: unknown;
     };
     fs.writeFileSync(path.join(outDir, 'mapping_config.json'), JSON.stringify(runConfig, null, 2), 'utf-8');
+
+    // Optional: search for the fewest columns with the best fidelity per colouring effort.
+    let gridOptimization: Awaited<ReturnType<typeof optimizeGrid>> | null = null;
+    if (runConfig.auto_grid === true) {
+      gridOptimization = await optimizeGrid(asset.storagePath, {
+        effort: typeof runConfig.effort === 'number' ? runConfig.effort : undefined,
+        overrides: {
+          ...(runConfig.params?.bg_mode ? { bg_mode: runConfig.params.bg_mode } : {}),
+          ...((runConfig.explicit_params as Record<string, unknown> | undefined) ?? {}),
+        },
+      });
+      runConfig.params = gridOptimization.params as unknown as Record<string, unknown>;
+      runConfig.selected_engine = gridOptimization.engine;
+      runConfig.allowed_engines = undefined;
+      fs.writeFileSync(path.join(outDir, 'grid_optimization.json'), JSON.stringify(gridOptimization, null, 2), 'utf-8');
+    }
 
     const res = await runImageAndSave(
       asset.storagePath,
@@ -114,6 +134,22 @@ async function executeProcessJob(assetId: string, runId: string): Promise<void> 
       warnings: res.warnings,
       selected_engine_resolved: res.engine,
       auto_selection: res.autoSelection,
+      ...(gridOptimization
+        ? {
+          params: gridOptimization.params,
+          grid_optimization: {
+            preset: gridOptimization.preset,
+            engine: gridOptimization.engine,
+            grid_cols: gridOptimization.grid_cols,
+            rows: gridOptimization.rows,
+            layout: gridOptimization.layout,
+            effort: gridOptimization.effort,
+            effort_options: gridOptimization.effort_options,
+            reason: gridOptimization.reason,
+            runtime_seconds: gridOptimization.runtime_seconds,
+          },
+        }
+        : {}),
     };
 
     await updateProcessingRun(runId, {
@@ -751,6 +787,8 @@ app.post('/api/assets/:assetId/process', attachLocalWorkspace, async (req: Works
       selected_engine: resolved.selected_engine,
       params: resolved.params,
       run_stability: resolved.run_stability,
+      auto_grid: resolved.auto_grid,
+      effort: resolved.effort,
       analysis: resolved.analysis,
       warnings: resolved.warnings,
     });

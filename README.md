@@ -32,6 +32,10 @@ npm run dev                 # http://localhost:3000
 | `npm run db:migrate` | apply migrations |
 | `npm run test:dual-layout` | dual-layout PDF classification test |
 | `npm run test:image-profiles` | image preset/profile test |
+| `npm run test:verify` | pipeline checks (presets, 3 mm rule, parity, background removal) |
+| `npm run test:optimizer` | grid-size optimiser test (about 30 s) |
+| `npm run optimize:image -- <image>` | find the best grid size for one image |
+| `npm run process:image -- <image>` | run one image with chosen settings |
 
 ## Testing image processing on its own (no database or server)
 
@@ -43,6 +47,27 @@ npm run process:image -- inputs/birds_03_snowy_owl.jpg --out out --preset balanc
 ```
 
 `process:image` options: `--preset` (balanced, nature, detailed, cartoon, portrait, simple_kids), `--engine A|B|C|D`, `--cols N`, `--bg off|simple|ai`, `--stability`. It writes `color_preview.png`, `numbered_preview.png`, `labels.json`, `config.json`, per-engine folders and metrics to the output folder.
+
+## Automatic grid size (fewest columns, best result)
+
+Fidelity to the source always improves with more columns, so "best result" has to be weighed against how many cells a person must colour. `server/optimize.ts` does this:
+
+1. Tries several presets and keeps the one with the best mean score.
+2. Measures a quality score (SSIM, edge F1, ΔE00, compactness, plus retention of small high-contrast details such as eyes and berries) for every grid width from 16 columns up to the 3 mm limit.
+3. Smooths the curve and picks the smallest width whose gain beats its cost (number of cells grows with the square of the columns).
+4. Compares engines B/C/D at that width and renders the result.
+
+The weight is `effort` (default 0.5; higher = fewer columns, lower = more detail). The result lists where every effort level would land, e.g. `0.25 -> 60, 0.5 -> 48, 1 -> 30`.
+
+```bash
+npm run optimize:image -- inputs/birds_03_snowy_owl.jpg --out out            # default effort 0.5
+npm run optimize:image -- inputs/birds_03_snowy_owl.jpg --out out --effort 1  # fewer columns
+npm run test:optimizer
+```
+
+In the web app, processing with `preset: "auto"` runs the optimiser unless `grid_cols` is given explicitly; send `"auto_grid": false` to turn it off, or `"effort": 1` to change the trade-off. The decision is stored in the run config as `grid_optimization` and in `grid_optimization.json`. The search takes roughly 30 s per image.
+
+Known limits: the score is a proxy, so check the preview. Detail-rich images land on more columns, and images that need more than the side-by-side limit are laid out one per page.
 
 ## Environment
 

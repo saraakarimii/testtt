@@ -142,6 +142,10 @@ export interface ProcessRequestPayload {
   bg_removal?: unknown;
   run_stability?: unknown;
   params?: unknown;
+  /** true: search for the fewest columns with the best fidelity per effort. Default true for preset "auto" without explicit grid_cols. */
+  auto_grid?: unknown;
+  /** Optimiser effort weight (higher = fewer columns). Default 0.5. */
+  effort?: unknown;
 }
 
 export interface ResolvedProcessConfig {
@@ -153,6 +157,9 @@ export interface ResolvedProcessConfig {
   allowed_engines?: string[];
   bg_removal: string | null;
   run_stability: boolean;
+  auto_grid: boolean;
+  effort: number;
+  explicit_params: Record<string, unknown>;
   params: MappingParams;
   analysis: (ImageAnalysis & { image_type?: string; reason?: string }) | null;
   warnings: string[];
@@ -295,6 +302,12 @@ export async function resolveProcessRequest(
     mergedRaw.grid_cols = Math.min(Number(mergedRaw.grid_cols), targetMaxCols);
   }
 
+  const wantsAutoGrid =
+    payload.auto_grid === true || (presetName === 'auto' && payload.auto_grid !== false);
+  const autoGrid = wantsAutoGrid && !hasExplicitGridCols;
+  const effortRaw = Number(payload.effort);
+  const effort = Number.isFinite(effortRaw) && effortRaw > 0 ? Math.min(10, effortRaw) : 0.5;
+
   const finalParams = validateParams(mergedRaw);
   const allowedEngines =
     selectedEngine === 'auto' && resolvedPresetName === 'portrait'
@@ -312,6 +325,9 @@ export async function resolveProcessRequest(
     allowed_engines: allowedEngines,
     bg_removal: bgRemovalReq,
     run_stability: Boolean(payload.run_stability),
+    auto_grid: autoGrid,
+    effort,
+    explicit_params: explicitParams,
     params: finalParams,
     analysis,
     warnings,
