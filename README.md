@@ -33,6 +33,17 @@ npm run dev                 # http://localhost:3000
 | `npm run test:dual-layout` | dual-layout PDF classification test |
 | `npm run test:image-profiles` | image preset/profile test |
 
+## Testing image processing on its own (no database or server)
+
+```bash
+npm run test:verify          # 6 checks: preset bounds, 3 mm rule, pipeline parity, background removal, auto preset/engine, overrides
+npm run test:image-profiles  # analyses the 8 fixtures in inputs/image-processing-tests and prints the detected profile
+npm run test:dual-layout     # side-by-side / full-page / rejected classification + PDFs
+npm run process:image -- inputs/birds_03_snowy_owl.jpg --out out --preset balanced --cols 30
+```
+
+`process:image` options: `--preset` (balanced, nature, detailed, cartoon, portrait, simple_kids), `--engine A|B|C|D`, `--cols N`, `--bg off|simple|ai`, `--stability`. It writes `color_preview.png`, `numbered_preview.png`, `labels.json`, `config.json`, per-engine folders and metrics to the output folder.
+
 ## Environment
 
 | Variable | Default | Notes |
